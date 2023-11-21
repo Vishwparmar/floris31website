@@ -11,7 +11,7 @@
         font-family: 'Assistant', sans-serif;
     }
     .h-font{
-        font-family: 'Playfair Display', serif;
+        font-family: 'Playfair Display', serif ;
     }
 </style>
 </head>
@@ -45,7 +45,7 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-success" type="submit">Search Button</button>
             </div>
         </div>
      </div>
