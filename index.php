@@ -45,7 +45,7 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <button class="btn btn-outline-success" type="submit">Search Button</button>
+                <button class="btn btn-outline-success" type="submit">Search </button>
             </div>
         </div>
      </div>
