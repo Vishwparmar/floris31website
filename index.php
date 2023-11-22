@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 <style>
     *{
         font-family: 'Assistant', sans-serif;
@@ -42,7 +44,7 @@
     }
 </style>
 </head>
-<body><!--navbar-->
+<body class="bg-light"><!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Floris31 Resort Management</a>
@@ -170,6 +172,80 @@
         </div>
     </div>
     
+    <!-- Carousel -->
+    <div class="container-fluid px-lg-4 mt-4">
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/pic1.avif" class="w-100 d-block"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/pic2.jpg" class="w-100 d-block"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/pic3.jpg" class="w-100 d-block"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/pic4.jpg" class="w-100 d-block"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/pic 5.jpg" class="w-100 d-block"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/pic 6.webp" class="w-100 d-block"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/pic 7.jpg" class="w-100 d-block"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/pic 8.jpg" class="w-100 d-block"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/pic 9.jpg" class="w-100 d-block"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/pic 10.jpg" class="w-100 d-block"/>
+                </div>
+                </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/pic1.avif" class="w-100 d-block"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/pic2.jpg" class="w-100 d-block"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/pic3.jpg" class="w-100 d-block"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/pic4.jpg" class="w-100 d-block"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/pic 5.jpg" class="w-100 d-block"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/pic 6.webp" class="w-100 d-block"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/pic 7.jpg" class="w-100 d-block"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/pic 8.jpg" class="w-100 d-block"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/pic 9.jpg" class="w-100 d-block"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/pic 10.jpg" class="w-100 d-block"/>
+              </div>
+            </div>
+          </div>
+    </div>
+
     <!--Check room availability-->
     <div class="container availability-form">
         <div class="row">
@@ -210,9 +286,34 @@
         </div>
     </div>
 
-<br><br><br>
-<br><br><br>
+    <br><br><br>
+    <br><br><br>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+        autoplay: {
+            delay:2500,
+            disableOnInteraction: false
+        }
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+        });
+    </script>
 </body>
 </html>
