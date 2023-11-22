@@ -15,7 +15,7 @@
     }
 </style>
 </head>
-<body>
+<body><!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Floris31 Resort Management</a>
