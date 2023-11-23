@@ -292,10 +292,7 @@
             <div class="col-lg-4 p-4">
                 <h3 class="h-font fw-bold fs-3">Floris31 Resort </h3>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Delectus qui similique expedita quod. Aliquam magnam autem,
-                    eos maxime assumenda error neque voluptates doloremque dicta dolor natus 
-                    voluptatem reprehenderit corporis reiciendis.
+                    The website aims to provide an efficient and user-friendly way for the users to check and reserves rooms for a hassle-free tour as well as for the resort staff to interact with customers to improve their satisfaction.
                 </p>
             </div>
             <div class="col-lg-4 p-4">
