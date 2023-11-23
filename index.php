@@ -12,7 +12,7 @@
         font-family: 'Assistant', sans-serif;
     }
     .h-font{
-        font-family: 'Playfair Display', serif;
+        font-family: 'Playfair Display', serif ;
     }
 
     input::-webkit-outer-spin-button,
@@ -25,10 +25,10 @@
     }
 </style>
 </head>
-<body>
+<body><!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Floris 31 resort</a>
+            <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Floris31 Resort Management</a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,7 +47,7 @@
                 <a class="nav-link me-2" href="#">Contact us</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">About Us</a>
                 </li>
             </ul>
             <div class="d-flex">
