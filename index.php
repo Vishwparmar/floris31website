@@ -216,7 +216,8 @@
                 <img src="images/pic1.avif" class="w-100 d-block"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic2.jpg" class="w-100 d-block"/>
+                <img src="images/pic2.jpg" alt="Description" style="max-width: 100%; height: auto;">
+                <!-- <img src="images/pic2.jpg" class="w-100 d-block"/> -->
               </div>
               <div class="swiper-slide">
                 <img src="images/pic3.jpg" class="w-100 d-block"/>
