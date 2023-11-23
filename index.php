@@ -177,34 +177,34 @@
         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                 <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="images/pic1.avif" class="w-100 d-block"/>
+                    <img src="images/pic1.avif" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic2.jpg" class="w-100 d-block"/>
+                    <img src="images/pic2.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic3.jpg" class="w-100 d-block"/>
+                    <img src="images/room.webp" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic4.jpg" class="w-100 d-block"/>
+                    <img src="images/pic4.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="images/pic 5.jpg" class="w-100 d-block"/>
+                  <img src="images/pic 5.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 6.webp" class="w-100 d-block"/>
+                    <img src="images/pic 6.webp" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 7.jpg" class="w-100 d-block"/>
+                    <img src="images/pic 7.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 8.jpg" class="w-100 d-block"/>
+                    <img src="images/pic 8.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 9.jpg" class="w-100 d-block"/>
+                    <img src="images/pic 9.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 10.jpg" class="w-100 d-block"/>
+                    <img src="images/pic 10.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 </div>
             <div class="swiper-button-next"></div>
@@ -213,34 +213,34 @@
           <div thumbsSlider="" class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="images/pic1.avif" class="w-100 d-block"/>
+                <img src="images/pic1.avif" class="w-100 d-block"  height="240px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic2.jpg" class="w-100 d-block"/>
+                <img src="images/pic2.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic3.jpg" class="w-100 d-block"/>
+                <img src="images/pic3.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic4.jpg" class="w-100 d-block"/>
+                <img src="images/pic4.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 5.jpg" class="w-100 d-block"/>
+                <img src="images/pic 5.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 6.webp" class="w-100 d-block"/>
+                <img src="images/pic 6.webp" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 7.jpg" class="w-100 d-block"/>
+                <img src="images/pic 7.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 8.jpg" class="w-100 d-block"/>
+                <img src="images/pic 8.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 9.jpg" class="w-100 d-block"/>
+                <img src="images/pic 9.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 10.jpg" class="w-100 d-block"/>
+                <img src="images/pic 10.jpg" class="w-100 d-block" height="260px"/>
               </div>
             </div>
           </div>
