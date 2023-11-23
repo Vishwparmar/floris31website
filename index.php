@@ -285,7 +285,191 @@
             </div>
         </div>
     </div>
+    <!-- Our Rooms -->
+    <h2 class="mt-5 pt-4 md-4 text-center fw-bold h-font">OUR ROOMS</h2>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+            <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                <img src="images/Rooms/room1.png" class="card-img-top">
+                <div class="card-body">
+                    <h5>Simple Room</h5>
+                    <h6 class="mb-4">₹1050 per night</h6>
+                    <div class="features mb-4">
+                        <h6 class="mb-1">Features</h6>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            1 Room
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            1 Bathroom
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            Balcony view
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            Max People : 2
+                        </span>
+                    </div>
+                    <div class="facilities md-4">
+                    <h6 class="mb-1">Facilities</h6>
+                    <span class="badge bg-secondary text-dark text-wrap">
+                        <i class="bi bi-wifi"></i>
+                        Free Wifi
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                        <i class="bi bi-tv"></i>
+                            Television
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                        <i class="bi bi-fan"></i>
+                            AC Room
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            HouseKeeping service
+                        </span>
+                    </div>
+                    <div class="rating md-4">
+                    <h6 class="mb-1">Rating</h6>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <div class="d-flex justify-content-evenly mb-2">
+                    <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                    <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-lg-4 col-md-6">
+            <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                <img src="images/Rooms/room2.png" class="card-img-top">
+                <div class="card-body">
+                    <h5>Deluxe Room</h5>
+                    <h6 class="mb-4">₹2500 per night</h6>
+                    <div class="features mb-4">
+                        <h6 class="mb-1">Features</h6>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            1 Room
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            1 Bathroom
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            Balcony view
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            Max People : 2
+                        </span>
+                    </div>
+                    <div class="facilities md-4">
+                    <h6 class="mb-1">Facilities</h6>
+                    <span class="badge bg-secondary text-dark text-wrap">
+                        <i class="bi bi-wifi"></i>
+                        Free Wifi
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                        <i class="bi bi-tv"></i>
+                            Television
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                        <i class="bi bi-fan"></i>
+                            AC Room
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            HouseKeeping service
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            Bath-tub
+                        </span>
+                    </div>
+                    <div class="rating md-4">
+                    <h6 class="mb-1">Rating</h6>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <div class="d-flex justify-content-evenly mb-2">
+                    <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                    <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                <img src="images/Rooms/room3.png" class="card-img-top">
+                <div class="card-body">
+                    <h5>Suite Room</h5>
+                    <h6 class="mb-4">₹4500 per night</h6>
+                    <div class="features mb-4">
+                        <h6 class="mb-1">Features</h6>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            1 Room
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            1 Bathroom
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            Sofa
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            Balcony view
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            Max People : 2
+                        </span>
+                    </div>
+                    <div class="facilities md-4">
+                    <h6 class="mb-1">Facilities</h6>
+                    <span class="badge bg-secondary text-dark text-wrap">
+                        <i class="bi bi-wifi"></i>
+                        Free Wifi
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                        <i class="bi bi-tv"></i>
+                            Television
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                        <i class="bi bi-fan"></i>
+                            AC Room
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            HouseKeeping service
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            Bath-tub
+                        </span>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            SPA Access
+                        </span>
+                    </div>
+                    <div class="rating md-4">
+                    <h6 class="mb-1">Rating</h6>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <div class="d-flex justify-content-evenly mb-2">
+                    <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                    <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-lg-12 text-center mt-5">
+             <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Rooms >>></a>
+         </div>
+        </div>
+    </div>
+     
     <!-- Footer -->
     <div class="container-fluid">
         <div class="row">
@@ -317,9 +501,11 @@
             </div>
         </div>
     </div>
+    
 
     <br><br><br>
     <br><br><br>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
