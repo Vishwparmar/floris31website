@@ -285,6 +285,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Our Rooms -->
     <h2 class="mt-5 pt-4 md-4 text-center fw-bold h-font">OUR ROOMS</h2>
     
@@ -479,7 +480,7 @@
 
                 <div class="swiper-slide bg-white p-4">
                     <div class="profile d-flex align-items-center mb-3">
-                        <img src="" width="30px">
+                        <img src="images/feature/star.svg" width="30px">
                         <h6 class="m-0 ms-2">Random user1</h6>
                     </div>
                     <p>
@@ -495,7 +496,7 @@
                 </div>
                 <div class="swiper-slide bg-white p-4">
                     <div class="profile d-flex align-items-center mb-3">
-                        <img src="" width="30px">
+                        <img src="images/feature/star.svg" width="30px">
                         <h6 class="m-0 ms-2">Random user1</h6>
                     </div>
                     <p>
@@ -511,7 +512,7 @@
                 </div>
                 <div class="swiper-slide bg-white p-4">
                     <div class="profile d-flex align-items-center mb-3">
-                        <img src="" width="30px">
+                        <img src="images/feature/star.svg" width="30px">
                         <h6 class="m-0 ms-2">Random user1</h6>
                     </div>
                     <p>
