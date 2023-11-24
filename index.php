@@ -7,30 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
 <style>
-    *{
-        font-family: 'Assistant', sans-serif;
-    }
-    .h-font{
-        font-family: 'Playfair Display', serif ;
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-    input[type=number] {
-    -moz-appearance: textfield;
-    }
-    .custom-bg{
-        background-color: #2ec1ac;
-    }
-    .custom-bg:hover{
-        background-color: #279e8c;
-    }
     .availability-form{
         margin-top: -50px;
         z-index: 2;
@@ -40,7 +19,7 @@
         .availability-form{
         margin-top: 25px;
         padding:0 35px;
-    }
+     }
     }
 </style>
 </head>
