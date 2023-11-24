@@ -26,7 +26,10 @@
 <body class="bg-light"><!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Floris31 Resort Management</a>
+        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">
+            <img src="images/Rooms/logo-removebg-preview.png"Logo style="width: 60px; height: auto; margin-right: 10px;"> Floris31 Resort Management
+        </a>
+
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -168,22 +171,22 @@
                     <img src="images/pic4.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="images/pic 5.jpg" class="w-100 d-block" height="550px"/>
+                  <img src="images/pic5.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 6.webp" class="w-100 d-block" height="550px"/>
+                    <img src="images/pic6.webp" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 7.jpg" class="w-100 d-block" height="550px"/>
+                    <img src="images/pic7.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 8.jpg" class="w-100 d-block" height="550px"/>
+                    <img src="images/pic8.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 9.jpg" class="w-100 d-block" height="550px"/>
+                    <img src="images/pic9.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic 10.jpg" class="w-100 d-block" height="550px"/>
+                    <img src="images/pic10.jpg" class="w-100 d-block" height="550px"/>
                 </div>
                 </div>
             <div class="swiper-button-next"></div>
@@ -204,22 +207,22 @@
                 <img src="images/pic4.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 5.jpg" class="w-100 d-block" height="260px"/>
+                <img src="images/pic5.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 6.webp" class="w-100 d-block" height="260px"/>
+                <img src="images/pic6.webp" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 7.jpg" class="w-100 d-block" height="260px"/>
+                <img src="images/pic7.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 8.jpg" class="w-100 d-block" height="260px"/>
+                <img src="images/pic8.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 9.jpg" class="w-100 d-block" height="260px"/>
+                <img src="images/pic9.jpg" class="w-100 d-block" height="260px"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/pic 10.jpg" class="w-100 d-block" height="260px"/>
+                <img src="images/pic10.jpg" class="w-100 d-block" height="260px"/>
               </div>
             </div>
           </div>
