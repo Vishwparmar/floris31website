@@ -6,520 +6,248 @@
     <title>Floris31 Resort - FACILITIES</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <?php require('include/links.php'); ?>
-<style>
-    .availability-form{
-        margin-top: -50px;
-        z-index: 2;
-        position: relative;
-    }
-    @media screen and (max-width: 575px){
-        .availability-form{
-        margin-top: 25px;
-        padding:0 35px;
-     }
-    }
-</style>
+    <style>
+        .pop:hover{
+            border-top-color: var(--teal) !important;
+            transform: scale(1.03);
+            transition: all 0.3s;
+        }
+    </style>
 </head>
 <body class="bg-light"><!--navbar-->
     <?php require('include/header.php'); ?>
-    <!-- Carousel -->
-    <div class="container-fluid px-lg-4 mt-4">
-        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="images/pic1.avif" class="w-100 d-block" height="550px"/>
+<!-- Our facilities -->
+    <div class="my-5 px-4">
+        <h2 class="fw-bold h-font text-center">OUR FACILITIES</h2>
+        <div class="h-line bg-dark"></div>
+        <p class="text-center mt-3">
+        The resort boasts a range of top-notch facilities, ensuring a delightful and comfortable stay for guests. The lush and well-maintained grounds feature a sparkling swimming pool, perfect for a refreshing dip or lazy lounging under the sun. For fitness enthusiasts, a well-equipped gym is available to keep up with workout routines. Indulge in culinary delights at the on-site restaurant, offering a diverse menu of delectable dishes. The resort also provides a rejuvenating spa for relaxation and pampering. With friendly staff, scenic views, and these amenities, the resort promises a memorable and enjoyable retreat for all its visitors.
+        </p>
+    </div> 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-5 px-4">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+                    <div class="d-flex align-items-center md-2">
+                    <img src="images/pic2.jpg" width="200px" height="150px">
+                    <h5 class="m-0 ms-3">Swimming Pool</h5>
+                    </div>
+                    <p>
+                    <br>Dive into relaxation at our pristine swimming pool. Surrounded by lush greenery, it provides a serene oasis for both leisurely swims and lazy sunbathing. The poolside area is equipped with comfortable loungers, creating a perfect spot to unwind.
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                    <img src="images/pic2.jpg" class="w-100 d-block" height="550px"/>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 px-4">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+                    <div class="d-flex align-items-center md-2">
+                    <img src="images/restro.jpg" width="200px" height="150px">
+                    <h5 class="m-0 ms-3">Restro cafe</h5>
+                    </div>
+                    <p>
+                    <br>Elevate your evenings at our rooftop lounge, offering a chic and sophisticated atmosphere. Sip on handcrafted cocktails while enjoying stunning sunset vistas or starlit skies, making it a perfect setting for socializing and creating lasting memories
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                    <img src="images/room.webp" class="w-100 d-block" height="550px"/>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 px-4">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+                    <div class="d-flex align-items-center md-2">
+                    <img src="images/pic5.jpg" width="200px" height="150px">
+                    <h5 class="m-0 ms-3">Mini Theatre</h5>
+                    </div>
+                    <p>
+                    Step into a world of cinematic delight at our resort's mini-theatre. Enjoy an intimate movie experience with cutting-edge audiovisual technology, offering the perfect escape within the comfort. special screenings, or even host private movie nights with friends and family without leaving the resort.
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                    <img src="images/pic4.jpg" class="w-100 d-block" height="550px"/>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 px-4">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+                    <div class="d-flex align-items-center md-2">
+                    <img src="images/play.jpg" width="200px" height="150px">
+                    <h5 class="m-0 ms-3">Play Area</h5>
+                    </div>
+                    <p>
+                    Families will delight in our specially designed play area for kids, where youthful energy meets endless fun.With safety as a priority, parents can unwind knowing that their children are enjoying a playful and secure environment.
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                  <img src="images/pic5.jpg" class="w-100 d-block" height="550px"/>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 px-4">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+                    <div class="d-flex align-items-center md-2">
+                    <img src="images/spa.jpg" width="200px" height="150px">
+                    <h5 class="m-0 ms-3">SPA</h5>
+                    </div>
+                    <p>
+                    <br>Pamper yourself at our rejuvenating spa and wellness center. Our skilled therapists offer a variety of treatments and massages, providing a perfect escape for relaxation and rejuvenation.
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                    <img src="images/pic6.webp" class="w-100 d-block" height="550px"/>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 px-4">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+                    <div class="d-flex align-items-center md-2">
+                    <img src="images/gym.jpg" width="200px" height="150px">
+                    <h5 class="m-0 ms-3">GYM</h5>
+                    </div>
+                    <p>
+                    <br>Stay active during your stay with our well-equipped fitness center. Whether you prefer cardio workouts or strength training, our facilities cater to all fitness levels, ensuring you maintain your wellness routine.
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                    <img src="images/pic7.jpg" class="w-100 d-block" height="550px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/pic8.jpg" class="w-100 d-block" height="550px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/pic9.jpg" class="w-100 d-block" height="550px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/pic10.jpg" class="w-100 d-block" height="550px"/>
-                </div>
-                </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+<!-- Additional services -->
+<div class="my-5 px-4">
+        <h2 class="fw-bold h-font text-center">Additional Services</h2>
+        <div class="h-line bg-dark"></div>
+        <p class="text-center mt-3"></p>
+    <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-4" align="center">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              	<i class='fa fa-wifi' style="font-size: 49px;
+                color: #ffffff;"></i>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-2">
+              <i class="bi bi-wifi"></i>
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Free Wifi<br>(Room Balconies & Public Area)</h3>
+              </div>
+            </div>      
           </div>
-          <div thumbsSlider="" class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/pic1.avif" class="w-100 d-block"  height="240px"/>
+		   <div class="col-md-4">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              			<i class='fa fa-spoon' style="font-size: 49px;
+    color: #ffffff;"></i>
+              	</div>
               </div>
-              <div class="swiper-slide">
-                <img src="images/pic2.jpg" class="w-100 d-block" height="260px"/>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Restro Cafe*</h3>
+            
               </div>
-              <div class="swiper-slide">
-                <img src="images/pic3.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic4.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic5.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic6.webp" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic7.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic8.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic9.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic10.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-            </div>
+            </div>      
           </div>
-    </div>
-
-    <!--Check room availability-->
-    <div class="container availability-form">
-        <div class="row">
-            <div class="col-lg-12 bg-white shadow p-4 rounded">
-                <h5 class="mb-4">Check Booking Availability</h5>
-                <form>
-                    <div class="row align-items-end">
-                        <div class="col-lg-3 mb-3">
-                            <label class="form-label" style="font-weight:500;">Check-in</label>
-                            <input type="date" class="form-control">
-                        </div>
-                        <div class="col-lg-3 mb-3">
-                            <label class="form-label" style="font-weight:500;">Check-out</label>
-                            <input type="date" class="form-control">
-                        </div>
-                        <div class="col-lg-3 mb-3">
-                            <label class="form-label" style="font-weight:500;">Adult</label>
-                            <select class="form-select shadow-none">
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-2 mb-3">
-                            <label class="form-label" style="font-weight:500;">Children</label>
-                            <select class="form-select shadow-none">
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-1 mb-lg-3 mt-2">
-                            <button type="submit" class="btn text-white shadow-none custom-bg">Submit</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+         <div class="col-md-4">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<i class='fa fa-bed' style="font-size: 49px;
+    color: #ffffff;"></i>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Room Service</h3>
+            
+              </div>
+            </div>      
+          </div>
+       <div class="col-md-4">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<i class='fa fa-car' style="font-size: 49px;
+    color: #ffffff;"></i>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Car Parking</h3>
+            
+              </div>
+            </div>      
+          </div>
+		  <div class="col-md-4">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<i class='fa fa-phone' style="font-size: 49px;
+    color: #ffffff;"></i>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Wheelchairl</h3>
+            
+              </div>
+            </div>      
+          </div>
+       <div class="col-md-4">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<i class='fa fa-plane' style="font-size: 49px;
+    color: #ffffff;"></i>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Airport Drop / Pick up*</h3>
+            
+              </div>
+            </div>      
+          </div>
+       <div class="col-md-4">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<i class='fa fa-money' style="font-size: 49px;
+    color: #ffffff;"></i>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Money Exchange*</h3>
+            
+              </div>
+            </div>      
+          </div>
+       <div class="col-md-4">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<i class='fa fa-heartbeat' style="font-size: 49px;
+    color: #ffffff;"></i>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Doctor on Call*</h3>
+            
+              </div>
+            </div>      
+          </div>
+       
+          <div class="col-md-4">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<i class='fa fa-lock' style="font-size: 49px;
+    color: #ffffff;"></i>
+              	</div>
+              </div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Safe Deposit Lockers*</h3>
+            
+              </div>
+            </div>      
+          </div>
+          
+          <div class="col-md-4">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center">
+              	<div class="icon d-flex align-items-center justify-content-center">
+              		<i class='fa fa-wheelchair' style="font-size: 49px;
+    color: #ffffff;"></i>
+              	</div>
+              </div>
+             
+            </div>      
+          </div>
         </div>
-    </div>
-
-    <!-- Our Rooms -->
-    <h2 class="mt-5 pt-4 md-4 text-center fw-bold h-font">OUR ROOMS</h2>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-            <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                <img src="images/Rooms/room1.png" class="card-img-top">
-                <div class="card-body">
-                    <h5>Simple Room</h5>
-                    <h6 class="mb-4">₹1050 per night</h6>
-                    <div class="features mb-4">
-                        <h6 class="mb-1">Features</h6>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            1 Room
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            1 Bathroom
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Balcony view
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Max People : 2
-                        </span>
-                    </div>
-                    <div class="facilities md-4">
-                    <h6 class="mb-1">Facilities</h6>
-                    <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-wifi"></i>
-                        Free Wifi
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-tv"></i>
-                            Television
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-fan"></i>
-                            AC Room
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            HouseKeeping service
-                        </span>
-                    </div>
-                    <div class="rating md-4">
-                    <h6 class="mb-1">Rating</h6>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                    <div class="d-flex justify-content-evenly mb-2">
-                    <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
-                    <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-            <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                <img src="images/Rooms/room2.png" class="card-img-top">
-                <div class="card-body">
-                    <h5>Deluxe Room</h5>
-                    <h6 class="mb-4">₹2500 per night</h6>
-                    <div class="features mb-4">
-                        <h6 class="mb-1">Features</h6>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            1 Room
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            1 Bathroom
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Balcony view
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Max People : 2
-                        </span>
-                    </div>
-                    <div class="facilities md-4">
-                    <h6 class="mb-1">Facilities</h6>
-                    <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-wifi"></i>
-                        Free Wifi
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-tv"></i>
-                            Television
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-fan"></i>
-                            AC Room
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            HouseKeeping service
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Bath-tub
-                        </span>
-                    </div>
-                    <div class="rating md-4">
-                    <h6 class="mb-1">Rating</h6>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                    <div class="d-flex justify-content-evenly mb-2">
-                    <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
-                    <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-            <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                <img src="images/Rooms/room3.png" class="card-img-top">
-                <div class="card-body">
-                    <h5>Suite Room</h5>
-                    <h6 class="mb-4">₹4500 per night</h6>
-                    <div class="features mb-4">
-                        <h6 class="mb-1">Features</h6>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            1 Room
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            1 Bathroom
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Sofa
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Balcony view
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Max People : 2
-                        </span>
-                    </div>
-                    <div class="facilities md-4">
-                    <h6 class="mb-1">Facilities</h6>
-                    <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-wifi"></i>
-                        Free Wifi
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-tv"></i>
-                            Television
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-fan"></i>
-                            AC Room
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            HouseKeeping service
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Bath-tub
-                        </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            SPA Access
-                        </span>
-                    </div>
-                    <div class="rating md-4">
-                    <h6 class="mb-1">Rating</h6>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                    <div class="d-flex justify-content-evenly mb-2">
-                    <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
-                    <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-         <div class="col-lg-12 text-center mt-5">
-             <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Rooms >>></a>
-         </div>
-        </div>
-    </div>
-
-    <!--Our Facilities -->
-    <h2 class="mt-5 pt-4 md-4 text-center fw-bold h-font">OUR FACILITIES</h2>
-
-    <div class="container">
-        <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
-            </div>
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
-            </div>
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
-            </div>
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
-            </div>
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
-            </div>
-            <div class="col-lg-12 text-center mt-5">
-                <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Facilities >>></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Testimonials -->
-    <h2 class="mt-5 pt-4 md-4 text-center fw-bold h-font">TESTIMONIALS</h2>
-
-    <div class="container mt-5">
-        <div class="swiper swiper-testimonials">
-            <div class="swiper-wrapper mb-5">
-
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-3">
-                        <img src="images/feature/star.svg" width="30px">
-                        <h6 class="m-0 ms-2">Random user1</h6>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Atque consectetur maxime voluptatibus reiciendis tempora dolores! Commodi error ut aliquid illum.
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                </div>
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-3">
-                        <img src="images/feature/star.svg" width="30px">
-                        <h6 class="m-0 ms-2">Random user1</h6>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Atque consectetur maxime voluptatibus reiciendis tempora dolores! Commodi error ut aliquid illum.
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                </div>
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-3">
-                        <img src="images/feature/star.svg" width="30px">
-                        <h6 class="m-0 ms-2">Random user1</h6>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Atque consectetur maxime voluptatibus reiciendis tempora dolores! Commodi error ut aliquid illum.
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                </div>
-
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-
-    <!-- Reach us -->
-    <h2 class="mt-5 pt-4 md-4 text-center fw-bold h-font">REACH US</h2>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
-                <iframe class="w-100 rounded" height="350" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230661.04484231502!2d81.6367733161178!3d25.402171897790073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398534c9b20bd49f%3A0xa2237856ad4041a!2sPrayagraj%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700845113956!5m2!1sen!2sin" loading="lazy"></iframe>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <div class="bg-white p-4 rounded mb-4">
-                    <h5>Call us</h5>
-                    <a href="tel: +911234567890" class="d-inline-block mb-2 text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i> +911234567890
-                    </a>
-                    <br>
-                    <a href="tel: +911234567890" class="d-inline-block text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i> +911234567890
-                    </a>
-                </div>
-                <div class="bg-white p-4 rounded mb-4">
-                    <h5>Follow us</h5>
-                    <a href="#" class="d-inline-block mb-3">
-                        <span class="badge bg-light text-dark fs-6 p-2">
-                            <i class="bi bi-twitter me-1"></i> Twitter
-                        </span>
-                    </a>
-                    <br>
-                    <a href="#" class="d-inline-block mb-3">
-                        <span class="badge bg-light text-dark fs-6 p-2">
-                            <i class="bi bi-facebook"></i> Facebook
-                        </span>
-                    </a>
-                    <br>
-                    <a href="#" class="d-inline-block">
-                        <span class="badge bg-light text-dark fs-6 p-2">
-                            <i class="bi bi-instagram"></i> Instagram
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+      </div>
+</div>
     <!-- Footer -->
     <?php require('include/footer.php'); ?>
 
     <br><br><br>
     <br><br><br>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-        autoplay: {
-            delay:2500,
-            disableOnInteraction: false
-        }
-        });
-        var swiper2 = new Swiper(".mySwiper2", {
-        loop: true,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-            swiper: swiper,
-        },
-        });
-
-        var swiper = new Swiper(".swiper-testimonials", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        slidesPerView: "3",
-        loop: true,
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        breakpoints: {
-            320:{
-                slidesPerView: "1",
-            },
-            640:{
-                slidesPerView: "1",
-            },
-            768:{
-                slidesPerView: "2",
-            },
-            1024:{
-                slidesPerView: "3",
-            },
-        }
-        });
-    </script>
 </body>
 </html>
