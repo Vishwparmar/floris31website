@@ -11,7 +11,7 @@
         .box{
             border-top-color: var(--teal)!important;
         }
-    </style>
+    </style> 
 </head>
 <body class="bg-light">
 
