@@ -163,21 +163,21 @@
                         </span>
                     </div>
                     <div class="facilities md-4">
-                    <h6 class="mb-1">Facilities</h6>
-                    <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-wifi"></i>
-                        Free Wifi
+                        <h6 class="mb-1">Facilities</h6>
+                        <span class="badge bg-secondary text-dark text-wrap">
+                            <i class="bi bi-wifi"></i>
+                                Free Wifi
                         </span>
                         <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-tv"></i>
-                            Television
+                            <i class="bi bi-tv"></i>
+                                Television
                         </span>
                         <span class="badge bg-secondary text-dark text-wrap">
-                        <i class="bi bi-fan"></i>
-                            AC Room
+                            <i class="bi bi-fan"></i>
+                                AC Room
                         </span>
                         <span class="badge bg-secondary text-dark text-wrap">
-                            HouseKeeping service
+                                HouseKeeping service
                         </span>
                     </div>
                     <div class="rating md-4">
@@ -302,14 +302,14 @@
                     </div>
                     <div class="rating md-4">
                     <h6 class="mb-1">Rating</h6>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
                     </div>
                     <div class="d-flex justify-content-evenly mb-2">
-                    <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
-                    <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
+                        <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                        <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
                     </div>
                 </div>
             </div>
