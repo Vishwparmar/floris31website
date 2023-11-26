@@ -20,7 +20,7 @@
     <div class="my-5 px-4">
         <h2 class="fw-bold h-font text-center mb-4">ABOUT US</h2>
         <div class="h-line bg-dark"></div>
-        <p>
+        <p class="mt-2 mb-2">
             Encompassed by natural landscapes& greenery, Floris31 Resort, Ahmedabad offers a memorable experience in the vibrant city of Ahmedabad.
             Our resort offers guests a range of services and amenities designed to provide comfort and convenience. 24-hour room service, 
             free Wi-Fi in all rooms, 24-hour security, daily housekeeping, wheelchair accessible are just some of the facilities on offer.
@@ -88,15 +88,15 @@
             <div class="swiper-wrapper mb-5">
                 <div class="swiper-slide bg-white text-center overflow-hidden rounded">
                     <img src="" class="w-100">
-                    <h5 class="mt-2">Random name</h5>
+                    <h5 class="mt-2">Vishwa Parmar</h5>
                 </div>
                 <div class="swiper-slide bg-white text-center overflow-hidden rounded">
                     <img src="" class="w-100">
-                    <h5 class="mt-2">Random name</h5>
+                    <h5 class="mt-2">Disha Shah</h5>
                 </div>
                 <div class="swiper-slide bg-white text-center overflow-hidden rounded">
                     <img src="" class="w-100">
-                    <h5 class="mt-2">Random name</h5>
+                    <h5 class="mt-2">Nupur Suthar</h5>
                 </div>
                 <div class="swiper-slide bg-white text-center overflow-hidden rounded">
                     <img src="" class="w-100">
