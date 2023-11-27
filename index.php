@@ -136,6 +136,7 @@
         </div>
     </div>
 
+
     <!-- Our Rooms -->
     <h2 class="mt-5 pt-4 md-4 text-center fw-bold h-font">OUR ROOMS</h2>
     
@@ -180,7 +181,18 @@
                                 HouseKeeping service
                         </span>
                     </div>
+                    <div class="guests md-4">
+                        <br>
+                    <h6 class="mb-1">Guests</h6>
+                    <span class="badge bg-secondary text-dark text-wrap">
+                        2 Guests
+                    </span>
+                    <span class="badge bg-secondary text-dark text-wrap">
+                        3 Children
+                    </span>
+                    </div>
                     <div class="rating md-4">
+                        <br>
                     <h6 class="mb-1">Rating</h6>
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
@@ -196,7 +208,7 @@
         </div>
 
         <div class="col-lg-4 col-md-6">
-            <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+            <div class="card border-0 shadow" style="max-width: 350px ;margin: auto;">
                 <img src="images/Rooms/room2.png" class="card-img-top">
                 <div class="card-body">
                     <h5>Deluxe Room</h5>
@@ -237,7 +249,18 @@
                             Bath-tub
                         </span>
                     </div>
-                    <div class="rating md-4">
+                    <div class="guests md-4">
+                        <br>
+                    <h6 class="mb-1">Guests</h6>
+                    <span class="badge bg-secondary text-dark text-wrap">
+                        5 Guests
+                    </span>
+                    <span class="badge bg-secondary text-dark text-wrap">
+                        3 Children
+                    </span>
+                    </div>
+                    <div class="rating md-4 md-4">
+                        <br>
                     <h6 class="mb-1">Rating</h6>
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
@@ -300,7 +323,18 @@
                             SPA Access
                         </span>
                     </div>
+                    <div class="guests md-4">
+                        <br>
+                    <h6 class="mb-1">Guests</h6>
+                    <span class="badge bg-secondary text-dark text-wrap">
+                        7 Guests
+                    </span>
+                    <span class="badge bg-secondary text-dark text-wrap">
+                        5 Children
+                    </span>
+                    </div>
                     <div class="rating md-4">
+                        <br>
                     <h6 class="mb-1">Rating</h6>
                         <i class="bi bi-star-fill text-warning"></i>
                         <i class="bi bi-star-fill text-warning"></i>

@@ -166,7 +166,7 @@
               	</div>
               </div>
               <div class="media-body p-2 mt-2">
-                <h3 class="heading mb-3" style="font-size: 23px !important;">Wheelchairl</h3>
+                <h3 class="heading mb-3" style="font-size: 23px !important;">Wheelchair available</h3>
             
               </div>
             </div>      
