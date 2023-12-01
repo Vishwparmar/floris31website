@@ -1,4 +1,12 @@
-<?php require('include/db_config.php'); ?>
+<?php 
+    require('include/db_config.php'); 
+    require('include/essentials.php');
+
+    session_start();
+    if((isset($_SESSION['adminLogin']) && $_SESSION['adminLogin']==true)){
+        redirect('dashboard.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,20 +48,18 @@
         {
             $frm_data = filteration($_POST);
 
-            $qrery = "SELECT * FROM `admin_cred` WHERE `admin_name`=? AND `admin_pass`=?";
+            $query = "SELECT * FROM `admin_cred` WHERE `admin_name`=? AND `admin_pass`=?";
             $values = [$frm_data['admin_name'],$frm_data['admin_pass']];
 
             $res = select($query,$values,"ss");
             if($res->num_rows==1){
-                echo "Got user";
+                $row = mysqli_fetch_assoc($res);
+                $_SESSION['adminLogin'] = true;
+                $_SESSION['adminId'] = $row['sr_no'];
+                redirect('dashboard.php');
             }
             else{
-                echo <<<alert;
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                alert;
+                alert('error','Login Failed - Invalid Credentials!');
             }
         }
 
