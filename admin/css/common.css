@@ -31,3 +31,8 @@ input[type=number] {
     margin: 0 auto;
     height: 1.7px;;
 }
+.custom-alert{
+    position: fixed;
+    right: 25px;
+    top: 25px;
+}
