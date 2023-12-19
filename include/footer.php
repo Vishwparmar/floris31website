@@ -1,12 +1,12 @@
-<div class="container-fluid">
+<div class="container-fluid footer">
     <div class="row">
-        <div class="col-lg-4 p-4">
+        <div class="col-lg-4 p-4" style = "margin-top:25px;">
             <h3 class="h-font fw-bold fs-3">Floris31 Resort </h3>
             <p>
                 The website aims to provide an efficient and user-friendly way for the users to check and reserves rooms for a hassle-free tour as well as for the resort staff to interact with customers to improve their satisfaction.
             </p>
         </div>
-        <div class="col-lg-4 p-4">
+        <div class="col-lg-4 p-4" style = "margin-top:25px;">
             <h5 class="mb-3">Links</h5>
             <a href="#" class="text-decoration-none d-inline-block mb-2 text-dark">Home</a><br>
             <a href="#" class="text-decoration-none d-inline-block mb-2 text-dark">Rooms</a><br>
@@ -14,7 +14,7 @@
             <a href="#" class="text-decoration-none d-inline-block mb-2 text-dark">Contact Us</a><br>
             <a href="#" class="text-decoration-none d-inline-block mb-2 text-dark">About</a><br>
         </div>
-        <div class="col-lg-4 p-4">
+        <div class="col-lg-4 p-4"style = "margin-top:25px;">
             <h5 class="mb-3">Follow us</h5>
             <a href="#" class="d-inline-block text-dark text-decoration-none mb-2">
                 <i class="bi bi-twitter me-1"></i>Twitter
