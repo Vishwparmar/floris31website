@@ -18,6 +18,7 @@
         padding:0 35px;
      }
     }
+    .newclass{}
 </style>
 </head>
 <body class="bg-light"><!--navbar-->
