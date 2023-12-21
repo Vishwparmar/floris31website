@@ -144,7 +144,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-6">
             <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                <img src="images/Rooms/room1.png" class="card-img-top">
+                <img src="images/Rooms/r1.png" class="card-img-top">
                 <div class="card-body">
                     <h5>Simple Room</h5>
                     <h6 class="mb-4">₹1050 per night</h6>
@@ -203,13 +203,13 @@
                     <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
                     <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
 
         <div class="col-lg-4 col-md-6">
             <div class="card border-0 shadow" style="max-width: 350px ;margin: auto;">
-                <img src="images/Rooms/room2.png" class="card-img-top">
+                <img src="images/Rooms/r2.png" class="card-img-top">
                 <div class="card-body">
                     <h5>Deluxe Room</h5>
                     <h6 class="mb-4">₹2500 per night</h6>
@@ -277,7 +277,7 @@
 
         <div class="col-lg-4 col-md-6">
             <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                <img src="images/Rooms/room3.png" class="card-img-top">
+                <img src="images/Rooms/r4.png" class="card-img-top">
                 <div class="card-body">
                     <h5>Suite Room</h5>
                     <h6 class="mb-4">₹4500 per night</h6>
@@ -356,29 +356,35 @@
     </div>
 
     <!--Our Facilities -->
+
     <h2 class="mt-5 pt-4 md-4 text-center fw-bold h-font">OUR FACILITIES</h2>
 
     <div class="container">
         <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
+            <div class="col-lg-2 col-md-1 text-center bg-white rounded shadow py-4 my-3 center-content">
+                <img width="48" height="48" src="https://img.icons8.com/fluency-systems-filled/48/wifi.png" alt="wifi"/>
+                <!-- <img src="images/feature/wifi-logo.svg" width="80px"> -->
                 <h5 class="mt-3">Wifi</h5>
             </div>
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
+            <div class="col-lg-2 col-md-1 text-center bg-white rounded shadow py-4 my-3">
+                <img width="48" height="48" src="https://img.icons8.com/windows/32/swimming.png" alt="swimming"/>
+                <!-- <img src="images/feature/wifi-logo.svg" width="80px"> -->
+                <h5 class="mt-3">Swimming Pool</h5>
             </div>
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
+            <div class="col-lg-2 col-md-1 text-center bg-white rounded shadow py-4 my-3 center-content">
+                <img width="48" height="48" src="https://img.icons8.com/pulsar-line/48/spa-care.png" alt="spa-care"/>
+                <h5 class="mt-4">SPA</h5>
             </div>
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
+
+            <div class="col-lg-2 col-md-1 text-center bg-white rounded shadow py-4 my-3">
+                <img width="48" height="48" src="https://img.icons8.com/ios/48/barbell.png" alt="barbell"/>
+                <!-- <img src="images/feature/wifi-logo.svg" width="80px"> -->
+                <h5 class="mt-3">GYM</h5>
             </div>
-            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/feature/wifi-logo.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
+            <div class="col-lg-2 col-md-1 text-center bg-white rounded shadow py-4 my-3">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/movie-theater.png" alt="movie-theater"/>
+                <!-- <img src="images/feature/wifi-logo.svg" width="80px"> -->
+                <h5 class="mt-3">Mini Theatre</h5>
             </div>
             <div class="col-lg-12 text-center mt-5">
                 <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Facilities >>></a>

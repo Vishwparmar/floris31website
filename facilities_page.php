@@ -16,6 +16,29 @@
 </head>
 <body class="bg-light"><!--navbar-->
     <?php require('include/header.php'); ?>
+
+    <section class="ftco-section ftco-counter img" style="background-image: url(images/faciltiiess.jpg);background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;">
+
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-12">
+		    		<div class="row">
+		          <div class="col-md-12">
+		            <div class="text-center">
+		              <div class="text">
+		               <h1 style="font-family: 'Leoney Font', sans-serif; text-shadow: 0px 0px 9px rgb(5 5 5 / 94%);font-weight: 600;color:#ffffff;margin-top:15%;margin-bottom:15%;">FACILITIES</h1>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    	
+    </section>
 <!-- Our facilities -->
     <div class="my-5 px-4">
         <h2 class="fw-bold h-font text-center">OUR FACILITIES</h2>
@@ -42,6 +65,7 @@
                     <div class="d-flex align-items-center md-2">
                     <img src="images/restro.jpg" width="200px" height="150px">
                     <h5 class="m-0 ms-3">Restro cafe</h5>
+
                     </div>
                     <p>
                     <br>Elevate your evenings at our rooftop lounge, offering a chic and sophisticated atmosphere. Sip on handcrafted cocktails while enjoying stunning sunset vistas or starlit skies, making it a perfect setting for socializing and creating lasting memories
@@ -110,7 +134,7 @@
               	</div>
               </div>
               <div class="media-body p-2 mt-2">
-              <i class="bi bi-wifi"></i>
+              <img width="48" height="48" src="https://img.icons8.com/fluency-systems-filled/48/wifi.png" alt="wifi"/>
                 <h3 class="heading mb-3" style="font-size: 23px !important;">Free Wifi<br>(Room Balconies & Public Area)</h3>
               </div>
             </div>      
@@ -119,13 +143,11 @@
             <div class="media block-6 services py-4 d-block text-center">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
-              			<i class='fa fa-spoon' style="font-size: 49px;
-    color: #ffffff;"></i>
               	</div>
               </div>
-              <div class="media-body p-2 mt-2">
+              <div class="media-body p-3 mt-3">
+               <img width="48" height="48" src="https://img.icons8.com/badges/48/waiter.png" alt="waiter"/>
                 <h3 class="heading mb-3" style="font-size: 23px !important;">Restro Cafe*</h3>
-            
               </div>
             </div>      
           </div>
@@ -137,7 +159,8 @@
     color: #ffffff;"></i>
               	</div>
               </div>
-              <div class="media-body p-2 mt-2">
+              <div class="media-body p-3 mt-3">
+              <img width="48" height="48" src="https://img.icons8.com/ios/50/housekeeper-female.png" alt="housekeeper-female"/>
                 <h3 class="heading mb-3" style="font-size: 23px !important;">Room Service</h3>
             
               </div>
@@ -152,8 +175,8 @@
               	</div>
               </div>
               <div class="media-body p-2 mt-2">
+              <img width="50" height="50" src="https://img.icons8.com/ios/50/indoor-parking.png" alt="indoor-parking"/>
                 <h3 class="heading mb-3" style="font-size: 23px !important;">Car Parking</h3>
-            
               </div>
             </div>      
           </div>
@@ -161,13 +184,11 @@
             <div class="media block-6 services py-4 d-block text-center">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
-              		<i class='fa fa-phone' style="font-size: 49px;
-    color: #ffffff;"></i>
               	</div>
               </div>
               <div class="media-body p-2 mt-2">
-                <h3 class="heading mb-3" style="font-size: 23px !important;">Wheelchair available</h3>
-            
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/wheelchair.png" alt="wheelchair"/>
+                <h3 class="heading mb-4" style="font-size: 23px !important;">Wheelchair available</h3>
               </div>
             </div>      
           </div>
@@ -175,13 +196,11 @@
             <div class="media block-6 services py-4 d-block text-center">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
-              		<i class='fa fa-plane' style="font-size: 49px;
-    color: #ffffff;"></i>
               	</div>
               </div>
               <div class="media-body p-2 mt-2">
+                <img width="48" height="48" src="https://img.icons8.com/pulsar-line/48/pickup-point.png" alt="pickup-point"/>
                 <h3 class="heading mb-3" style="font-size: 23px !important;">Airport Drop / Pick up*</h3>
-            
               </div>
             </div>      
           </div>
@@ -189,11 +208,10 @@
             <div class="media block-6 services py-4 d-block text-center">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
-              		<i class='fa fa-money' style="font-size: 49px;
-    color: #ffffff;"></i>
               	</div>
               </div>
               <div class="media-body p-2 mt-2">
+                <img width="48" height="48" src="https://img.icons8.com/pulsar-line/48/exchange-rupee.png" alt="exchange-rupee"/>
                 <h3 class="heading mb-3" style="font-size: 23px !important;">Money Exchange*</h3>
             
               </div>
@@ -203,11 +221,11 @@
             <div class="media block-6 services py-4 d-block text-center">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
-              		<i class='fa fa-heartbeat' style="font-size: 49px;
-    color: #ffffff;"></i>
+            
               	</div>
               </div>
               <div class="media-body p-2 mt-2">
+              <img width="48" height="48" src="https://img.icons8.com/dotty/80/medical-doctor.png" alt="medical-doctor"/>
                 <h3 class="heading mb-3" style="font-size: 23px !important;">Doctor on Call*</h3>
             
               </div>
@@ -223,6 +241,7 @@
               	</div>
               </div>
               <div class="media-body p-2 mt-2">
+              <img width="48" height="48" src="https://img.icons8.com/dotty/80/safe.png" alt="safe"/>
                 <h3 class="heading mb-3" style="font-size: 23px !important;">Safe Deposit Lockers*</h3>
             
               </div>

@@ -11,6 +11,28 @@
 <body class="bg-light">
     
     <?php require('include/header.php'); ?>
+    <section class="ftco-section ftco-counter img" style="background-image: url(images/faciltiiess.jpg);background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;">
+
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-12">
+		    		<div class="row">
+		          <div class="col-md-12">
+		            <div class="text-center">
+		              <div class="text">
+		               <h1 style="font-family: 'Leoney Font', sans-serif; text-shadow: 0px 0px 9px rgb(5 5 5 / 94%);font-weight: 600;color:#ffffff;margin-top:15%;margin-bottom:15%;">Accommodation</h1>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    	
+    </section>
 
     <div class="my-5 px-4">
         <h2 class="fw-bold h-font text-center mb-4">OUR ROOMS</h2>
@@ -72,7 +94,7 @@
                 <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-lg-0 mb-3">
-                            <img src="images/Rooms/room1.png" class="img-fluid rounded">
+                            <img src="images\Rooms\room1.png" class="img-fluid rounded">
                         </div>
                         <div class="col-md-5 px-lg-3 px-md-3 px-0">
                             <h5 class="mb-1">Simple Room Name</h5>
@@ -120,7 +142,7 @@
                 <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-lg-0 mb-3">
-                            <img src="images/Rooms/room1.png" class="img-fluid rounded">
+                            <img src="images/Rooms/room2.png" class="img-fluid rounded">
                         </div>
                         <div class="col-md-5 px-lg-3 px-md-3 px-0">
                             <h5 class="mb-1">Simple Room Name</h5>
@@ -168,7 +190,7 @@
                 <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-lg-0 mb-3">
-                            <img src="images/Rooms/room1.png" class="img-fluid rounded">
+                            <img src="images/Rooms/room2.png" class="img-fluid rounded">
                         </div>
                         <div class="col-md-5 px-lg-3 px-md-3 px-0">
                             <h5 class="mb-1">Simple Room Name</h5>
