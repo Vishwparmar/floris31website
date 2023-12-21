@@ -15,9 +15,10 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-input[type=number] {
+/*input[type=number] {
     -moz-appearance: textfield;
-}
+}*/
+
 .custom-bg{
     background-color: var(--teal);
     border: 1px solid var(--teal);
@@ -34,5 +35,20 @@ input[type=number] {
 .custom-alert{
     position: fixed;
     right: 25px;
-    top: 25px;
+    top: 80px;
 }
+
+#dashboard-menu{
+    position: fixed;
+    height: 100%;
+}
+@media screen and (max-width: 991px){
+    #dashboard-menu{
+        width:100%;
+        height: auto;
+    }
+    #main-content{
+        margin-top: 60px;
+    }
+}
+

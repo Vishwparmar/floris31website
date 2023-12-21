@@ -31,3 +31,7 @@ input[type=number] {
     margin: 0 auto;
     height: 1.7px;;
 }
+.footer{
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
