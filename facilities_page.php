@@ -12,6 +12,13 @@
             transform: scale(1.03);
             transition: all 0.3s;
         }
+        .media:hover {
+          /* Add your hover styles here */
+          background-color: teal;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+
     </style>
 </head>
 <body class="bg-light"><!--navbar-->
@@ -126,7 +133,7 @@
     <div class="container">
         <div class="row d-flex">
           <div class="col-md-4" align="center">
-            <div class="media block-6 services py-4 d-block text-center">
+            <div class="media block-6 services py-4 d-block text-center media">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
               	<i class='fa fa-wifi' style="font-size: 49px;

@@ -18,7 +18,7 @@
         padding:0 35px;
      }
     }
-    .newclass{}
+
 </style>
 </head>
 <body class="bg-light"><!--navbar-->
@@ -28,74 +28,28 @@
         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                 <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="images/pic1.avif" class="w-100 d-block" height="550px"/>
+                    <img src="images/pic1.avif" class="w-100 d-block" height="650px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic2.jpg" class="w-100 d-block" height="550px"/>
+                    <img src="images/pic2.jpg" class="w-100 d-block" height="650px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/room.webp" class="w-100 d-block" height="550px"/>
+                    <img src="images/room.webp" class="w-100 d-block" height="650px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic4.jpg" class="w-100 d-block" height="550px"/>
+                    <img src="images/pic4.jpg" class="w-100 d-block" height="650px"/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="images/pic5.jpg" class="w-100 d-block" height="550px"/>
+                  <img src="images/pic5.jpg" class="w-100 d-block" height="650px"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/pic6.webp" class="w-100 d-block" height="550px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/pic7.jpg" class="w-100 d-block" height="550px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/pic8.jpg" class="w-100 d-block" height="550px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/pic9.jpg" class="w-100 d-block" height="550px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/pic10.jpg" class="w-100 d-block" height="550px"/>
+                    <img src="images/pic10.jpg" class="w-100 d-block" height="650px"/>
                 </div>
                 </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
-          <div thumbsSlider="" class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/pic1.avif" class="w-100 d-block"  height="240px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic2.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic3.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic4.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic5.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic6.webp" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic7.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic8.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic9.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/pic10.jpg" class="w-100 d-block" height="260px"/>
-              </div>
-            </div>
-          </div>
-    </div>
+        
 
     <!--Check room availability-->
     <div class="container availability-form">
@@ -151,34 +105,37 @@
                     <h6 class="mb-4">₹1050 per night</h6>
                     <div class="features mb-4">
                         <h6 class="mb-1">Features</h6>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             1 Room
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             1 Bathroom
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             Balcony view
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Max People : 2
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
+                            small Desk
+                        </span>
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
+                            Max People : 4
                         </span>
                     </div>
                     <div class="facilities md-4">
                         <h6 class="mb-1">Facilities</h6>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             <i class="bi bi-wifi"></i>
                                 Free Wifi
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             <i class="bi bi-tv"></i>
                                 Television
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             <i class="bi bi-fan"></i>
                                 AC Room
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                                 HouseKeeping service
                         </span>
                     </div>
@@ -200,6 +157,7 @@
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
                     </div>
+                    <br>
                     <div class="d-flex justify-content-evenly mb-2">
                     <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
                     <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
@@ -216,37 +174,40 @@
                     <h6 class="mb-4">₹2500 per night</h6>
                     <div class="features mb-4">
                         <h6 class="mb-1">Features</h6>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             1 Room
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             1 Bathroom
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             Balcony view
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Max People : 2
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
+                            Work-Table 
+                        </span>
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
+                            Max People : 6
                         </span>
                     </div>
                     <div class="facilities md-4">
                     <h6 class="mb-1">Facilities</h6>
-                    <span class="badge bg-secondary text-dark text-wrap">
+                    <span class="badge bg-secondary bg-light text-dark text-wrap">
                         <i class="bi bi-wifi"></i>
                         Free Wifi
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                         <i class="bi bi-tv"></i>
                             Television
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                         <i class="bi bi-fan"></i>
                             AC Room
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             HouseKeeping service
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             Bath-tub
                         </span>
                     </div>
@@ -268,6 +229,7 @@
                     <i class="bi bi-star-fill text-warning"></i>
                     <i class="bi bi-star-fill text-warning"></i>
                     </div>
+                    <br>
                     <div class="d-flex justify-content-evenly mb-2">
                     <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
                     <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
@@ -284,43 +246,46 @@
                     <h6 class="mb-4">₹4500 per night</h6>
                     <div class="features mb-4">
                         <h6 class="mb-1">Features</h6>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             1 Room
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             1 Bathroom
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             Sofa
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             Balcony view
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
-                            Max People : 2
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
+                           Work-Table
+                        </span>
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
+                            Max People : 8
                         </span>
                     </div>
                     <div class="facilities md-4">
                     <h6 class="mb-1">Facilities</h6>
-                    <span class="badge bg-secondary text-dark text-wrap">
+                    <span class="badge bg-secondary bg-light text-dark text-wrap">
                         <i class="bi bi-wifi"></i>
                         Free Wifi
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                         <i class="bi bi-tv"></i>
                             Television
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                         <i class="bi bi-fan"></i>
                             AC Room
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             HouseKeeping service
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             Bath-tub
                         </span>
-                        <span class="badge bg-secondary text-dark text-wrap">
+                        <span class="badge bg-secondary bg-light text-dark text-wrap">
                             SPA Access
                         </span>
                     </div>
@@ -342,6 +307,7 @@
                         <i class="bi bi-star-fill text-warning"></i>
                         <i class="bi bi-star-fill text-warning"></i>
                     </div>
+                    <br>
                     <div class="d-flex justify-content-evenly mb-2">
                         <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
                         <a href="#" class="btn btn-sm btn-outline-dark  shadow-none">More Details</a>
@@ -406,8 +372,7 @@
                         <h6 class="m-0 ms-2">Random user1</h6>
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Atque consectetur maxime voluptatibus reiciendis tempora dolores! Commodi error ut aliquid illum.
+                        Incredible experience! The resort's breathtaking views and outstanding service made our stay unforgettable. A true gem!
                     </p>
                     <div class="rating">
                         <i class="bi bi-star-fill text-warning"></i>
@@ -422,8 +387,7 @@
                         <h6 class="m-0 ms-2">Random user1</h6>
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Atque consectetur maxime voluptatibus reiciendis tempora dolores! Commodi error ut aliquid illum.
+                    Exceptional hospitality! From the warm welcome to the impeccable service, every moment at the resort was pure delight. Can't wait to return!
                     </p>
                     <div class="rating">
                         <i class="bi bi-star-fill text-warning"></i>
@@ -438,8 +402,7 @@
                         <h6 class="m-0 ms-2">Random user1</h6>
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Atque consectetur maxime voluptatibus reiciendis tempora dolores! Commodi error ut aliquid illum.
+                    Exceptional service! The resort's friendly staff went above and beyond to ensure a warm and welcoming experience. Their genuine hospitality made our stay truly memorable
                     </p>
                     <div class="rating">
                         <i class="bi bi-star-fill text-warning"></i>
@@ -505,62 +468,59 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-        autoplay: {
-            delay:2500,
-            disableOnInteraction: false
-        }
-        });
-        var swiper2 = new Swiper(".mySwiper2", {
-        loop: true,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-            swiper: swiper,
-        },
-        });
+    <!-- <script> -->
+        <script>
+            var swiper = new Swiper(".mySwiper2", {
+            spaceBetween: 30,
+            effect: "fade",
+            loop: true,
 
-        var swiper = new Swiper(".swiper-testimonials", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        slidesPerView: "3",
-        loop: true,
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        breakpoints: {
-            320:{
-                slidesPerView: "1",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
-            640:{
-                slidesPerView: "1",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            768:{
-                slidesPerView: "2",
+            autoplay :{
+                delay: 2500,
+                disableoninteraction: false,
+            }
+            });
+
+                var swiper = new Swiper(".swiper-testimonials", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            slidesPerView: "3",
+            loop: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
             },
-            1024:{
-                slidesPerView: "3",
+            pagination: {
+                el: ".swiper-pagination",
             },
-        }
-        });
-    </script>
+            breakpoints: {
+                320:{
+                    slidesPerView: "1",
+                },
+                640:{
+                    slidesPerView: "1",
+                },
+                768:{
+                    slidesPerView: "2",
+                },
+                1024:{
+                    slidesPerView: "3",
+                },
+            }
+            });
+  </script>
 </body>
 </html>
