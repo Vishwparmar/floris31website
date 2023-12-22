@@ -35,7 +35,7 @@ input::-webkit-inner-spin-button {
 .custom-alert{
     position: fixed;
     right: 25px;
-    top: 25px;
+    top: 80px;
 }
 
 #dashboard-menu{
