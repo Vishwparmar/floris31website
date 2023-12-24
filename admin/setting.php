@@ -336,10 +336,19 @@
                 document.getElementById(contacts_p_id[i]).innerText =contacts_data[i+1];
                }
                iframe.src = contacts_data[9];
+               contacts_inp(contacts_data);
             }
 
-
             xhr.send('get_contacts');
+        }
+
+        function contacts_inp(data) 
+        {
+            let contacts_inp_id = ['address_inp','gmap_inp','pn1_inp','pn2_inp','email_inp','tw_inp','fb_inp','insta_inp','iframe_inp'];
+
+            for(i=0;i<contacts_inp_id.length;i++){
+                document.getElementById(contacts_inp_id[i]).value = data[i+1] ;
+            }
         }
 
         window.onload = function(){
