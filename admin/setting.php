@@ -147,12 +147,12 @@
                 <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <form id="Contacts_s_form">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                                <h5 class="modal-title fw-bold">Contact Settings</h5>
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                    <h5 class="modal-title fw-bold">Contact Settings</h5>
                             </div>
                             <div class="modal-body">
-                                <div class="container-fluid p-0">
+                            <div class="container-fluid p-0">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="mb-3">
@@ -167,11 +167,11 @@
                                                 <label class="form-label fw-bold">Phone Numbers(With Counrty Code)</label>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                    <input type="text" name="pn1" id="ph1_inp" class="form-control shadow-none" required>
+                                                    <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                    <input type="text" name="pn2" id="ph2_inp" class="form-control shadow-none" required>
+                                                    <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
@@ -199,14 +199,14 @@
                                                     <input name="iframe" id="iframe_inp" type="text" class="form-control" required>
                                                 </div>
                                         </div>
-                                    </div>
-                                    </div>
-                                 </div>
-                                 <div class="modal-footer" style= "background-color:white; border :none;"> 
-                                    <button type="button" onclick="site_title.value = general_data.site_title, site_about.value = general_data.site_about" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer" style= "background-color:white; border :none;"> 
+                                    <button type="button" onclick="contacts_inp(contacts_data)" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
                                     <button type="submit" class="btn custom-bg text-dark shadow-none">SUBMIT</button>
-                                </div>
-                                </div>
+                            </div>
+                            </div>
 
                             </div>
                             </div>
@@ -226,6 +226,8 @@
         let general_s_form  = document.getElementById('general_s_form');
         let site_title_inp = document.getElementById('site_title_inp');
         let site_about_inp = document.getElementById('site_about_inp');
+
+        let Contacts_s_form  = document.getElementById('Conctacts_s_form');
 
         general_s_form.addEventListener('submit', function(e){
             e.preventDefault();
@@ -311,8 +313,7 @@
                 {
                     alert('success','Shutdown mode off!');
                 }
-                get_general();
-                
+                get_general();   
             }
 
             xhr.send('upd_shutdown='+val);
@@ -350,6 +351,47 @@
                 document.getElementById(contacts_inp_id[i]).value = data[i+1] ;
             }
         }
+        
+        // Contacts_s_form.addEventListener('submit', function(e){
+        //     e.preventDefault();
+        //     upd_contacts();
+        // })
+
+        function upd_contacts()
+        {
+            let index = ['address','gmap','pn1','pn2','email','tw','fb','insta','iframe'];
+            let contacts_inp_id =['address_inp','gmap_inp','pn1_inp','pn2_inp','email_inp','tw_inp','fb_inp','insta_inp','iframe_inp'];
+
+            let data_str="";
+
+            for(i=0; i<index.length; i++) {
+                data_str += index[i] + "=" + document.getElementById(contacts_inp_id[i]).value + '&';
+            }
+            data_str += "upd_contacts";
+
+            let xhr= new XMLHttpRequest();
+            xhr.open("POST","ajax/settings_crud.php",true);
+            xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+            
+            xhr.onload = function(){
+                var myModal = document.getElementById('contacts-s');
+                var modal = bootstrap.Modal.getInstance(myModal);
+                modal.hide(); 
+                if(this.responseText == 1)
+                {
+                    alert('success','Changes saved!');  
+                    get_contacts();
+                }
+                else
+                {
+                    alert('success','No Changes made!');
+                }
+                get_general();
+            }
+
+            xhr.send(data_str);
+        }
+
 
         window.onload = function(){
             get_general();
