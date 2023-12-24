@@ -180,34 +180,34 @@
                                             </div>
                                     </div>
                                     <div class="col-md-6">
-                                    <div class="mb-3">
-                                            <label class="form-label fw-bold">Social Link</label>
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text"><i class="bi bi-twitter"></i></span>
-                                                <input type="text" name="tw" id="tw_inp" class="form-control shadow-none">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text"><i class="bi bi-facebook"></i></span>
-                                                <input type="text" name="fb" id="fb_inp" class="form-control shadow-none">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text"><i class="bi bi-instagram"></i></span>
-                                                <input type="text" name="insta" id="insta_inp" class="form-control shadow-none">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label fw-bold">iFrame Src</label>
-                                                <input name="iframe" id="iframe_inp" type="text" class="form-control" required>
-                                            </div>
-                                    </div>
+                                        <div class="mb-3">
+                                                <label class="form-label fw-bold">Social Link</label>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i class="bi bi-twitter"></i></span>
+                                                    <input type="text" name="tw" id="tw_inp" class="form-control shadow-none">
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i class="bi bi-facebook"></i></span>
+                                                    <input type="text" name="fb" id="fb_inp" class="form-control shadow-none">
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i class="bi bi-instagram"></i></span>
+                                                    <input type="text" name="insta" id="insta_inp" class="form-control shadow-none">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label fw-bold">iFrame Src</label>
+                                                    <input name="iframe" id="iframe_inp" type="text" class="form-control" required>
+                                                </div>
+                                        </div>
                                     </div>
                                     </div>
                                  </div>
+                                 <div class="modal-footer" style= "background-color:white; border :none;"> 
+                                    <button type="button" onclick="site_title.value = general_data.site_title, site_about.value = general_data.site_about" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
+                                    <button type="submit" class="btn custom-bg text-dark shadow-none">SUBMIT</button>
+                                </div>
+                                </div>
 
-                            </div>
-                        </div>
-                            <div class="modal-footer">
-                                <button type="button" onclick="site_title.value = general_data.site_title, site_about.value = general_data.site_about" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
-                                <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
                             </div>
                             </div>
                         </form>
