@@ -328,7 +328,7 @@
         function get_contacts()
         {
             let contacts_p_id = ['address','gmap','pn1','pn2','email','tw','fb','insta','iframe'];
-            let iframe = document.getElementById('iframe_inp');
+            let iframe = document.getElementById('iframe');
 
             let xhr= new XMLHttpRequest();
             xhr.open("POST","ajax/settings_crud.php",true);
