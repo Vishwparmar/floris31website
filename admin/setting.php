@@ -357,6 +357,7 @@
                 document.getElementById(contacts_inp_id[i]).value = data[i+1] ;
             }
         }
+
         
         function upd_contacts()
         {
@@ -394,7 +395,7 @@
 
         // window.onload = function(){
         //     get_general();
-        //     get_contacts();
+        //     get_contacts()..ignore;
         // }
 
 
