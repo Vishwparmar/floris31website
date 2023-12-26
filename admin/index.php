@@ -24,7 +24,6 @@
             width: 400px;
         }
     </style>
-    <link rel="stylesheet" href="admin\css\common.css">
 </head>
 <body class="bg-light">
 

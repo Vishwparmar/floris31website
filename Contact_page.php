@@ -9,48 +9,68 @@
 </head>
 <body class="bg-light"><!--navbar-->
     <?php require('include/header.php'); ?>
-<!-- Our facilities -->
+
+    <!-- Our facilities -->
     <div class="my-5 px-4">
         <h2 class="fw-bold h-font text-center">CONTACT US</h2>
         <div class="h-line bg-dark"></div>
         <p class="text-center mt-3">
-        The resort boasts a range of top-notch facilities, ensuring a delightful and comfortable stay for guests. The lush and well-maintained grounds feature a sparkling swimming pool, perfect for a refreshing dip or lazy lounging under the sun. For fitness enthusiasts, a well-equipped gym is available to keep up with workout routines. Indulge in culinary delights at the on-site restaurant, offering a diverse menu of delectable dishes. The resort also provides a rejuvenating spa for relaxation and pampering. With friendly staff, scenic views, and these amenities, the resort promises a memorable and enjoyable retreat for all its visitors.
+            The resort boasts a range of top-notch facilities, ensuring a delightful and
+            comfortable stay for guests. The lush and well-maintained grounds feature a sparkling swimming pool,
+            perfect for a refreshing dip or lazy lounging under the sun. For fitness enthusiasts, a well-equipped gym is 
+            available to keep up with workout routines. Indulge in culinary delights at the on-site restaurant, offering a diverse menu 
+            of delectable dishes. The resort also provides a rejuvenating spa for relaxation and pampering. With friendly staff, scenic views, 
+            and these amenities, the resort promises a memorable and enjoyable retreat for all its visitors.
         </p>
     </div> 
+
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 mb-5 px-4">
 
                 <div class="bg-white rounded shadow p-4">
-                <iframe class="w-100 rounded md-4" height="350" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.2991840631!2d72.41493225790053!3d23.02015808674564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1703395980990!5m2!1sen!2sin" loading="lazy"></iframe>
+                <iframe class="w-100 rounded md-4" height="350" src="<?php echo $contact_r['iframe'] ?>" loading="lazy"></iframe>
                  
                 <h5>Address</h5>
-                <a href="https://maps.app.goo.gl/EJpPmQ5CbaJxd4Ag7" target="_blank" class="d-inline-block text-decoration-none text-dark md-2">
-                    <i class="bi bi-geo-alt"></i> Floris31 Resort, Ahemdabad 
+                <a href="<?php echo $contact_r['gmap'] ?>" target="_blank" class="d-inline-block text-decoration-none text-dark md-2">
+                    <i class="bi bi-geo-alt"></i> <?php echo $contact_r['adress'] ?> 
                 </a>
 
                 <h5 class="mt-4">Call us</h5>
-                <a href="tel: +911234567890" class="d-inline-block mb-2 text-decoration-none text-dark">
-                    <i class="bi bi-telephone-fill"></i> +911234567890
+                <a href="tel: +<?php echo $contact_r['pn1'] ?>" class="d-inline-block mb-2 text-decoration-none text-dark">
+                    <i class="bi bi-telephone-fill"></i> +<?php echo $contact_r['pn1'] ?>
                 </a>
                 <br>
-                <a href="tel: +911234567890" class="d-inline-block text-decoration-none text-dark">
-                    <i class="bi bi-telephone-fill"></i> +911234567890
-                </a>
+                <?php 
+                    if($contact_r['pn2']!=''){
+                        echo<<<data
+                            <a href="tel: +$contact_r[pn2]" class="d-inline-block text-decoration-none text-dark">
+                                <i class="bi bi-telephone-fill"></i> +$contact_r[pn2]
+                            </a>
+                        data;
+                    }
+                ?>
 
                 <h5 class="mt-4">Email</h5>
-                <a href="mailto: floris31@gmail.com" class="d-inline-block mb-2 text-decoration-none text-dark">
-                    <i class="bi bi-envelope"></i> floris31@gmail.com
+                <a href="mailto: <?php echo $contact_r['email'] ?> " class="d-inline-block mb-2 text-decoration-none text-dark">
+                    <i class="bi bi-envelope"></i> <?php echo $contact_r['email'] ?> 
                 </a>
 
                   <h5 class="mt-4">Follow us</h5>
-                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
-                        <i class="bi bi-twitter me-1"></i> 
-                    </a>
-                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
+                  <?php 
+                    if($contact_r['tw']!=''){
+                        echo<<<data
+                            <a href="$contact_r[tw]" class="d-inline-block text-dark fs-5 me-2">
+                                <i class="bi bi-twitter me-1"></i> 
+                            </a>
+                        data;
+                    }
+                  ?>
+                    
+                    <a href="<?php echo $contact_r['fb'] ?> " class="d-inline-block text-dark fs-5 me-2">
                         <i class="bi bi-facebook me-1"></i>
                     </a>
-                    <a href="#" class="d-inline-block text-dark fs-5">
+                    <a href="<?php echo $contact_r['insta'] ?> " class="d-inline-block text-dark fs-5">
                         <i class="bi bi-instagram me-1"></i>
                     </a>
                 </div>
