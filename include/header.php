@@ -1,4 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
+<?php 
+    require('admin\include\db_config.php');
+    require('admin\include\essentials.php');
+
+    $contact_q = "SELECT * FROM `contact_detail` WHERE `sr_no`=?";
+    $values = [1];
+    $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
+?>
+
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">
             <img src="images/Rooms/logo-removebg-preview.png"Logo style="width: 60px; height: auto; margin-right: 10px;"> Floris31 Resort Management
@@ -10,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active me-2" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link me-2" href="index.php">Home</a>
             </li>
             <li class="nav-item">
             <a class="nav-link me-2" href="rooms_page.php">Rooms</a>

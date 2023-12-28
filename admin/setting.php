@@ -167,11 +167,11 @@
                                                 <label class="form-label fw-bold">Phone Numbers(With Counrty Code)</label>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                    <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
+                                                    <input type="number" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                    <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
+                                                    <input type="number" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
@@ -204,7 +204,7 @@
                             </div>
                             <div class="modal-footer" style= "background-color:white; border :none;"> 
                                     <button type="button" onclick="contacts_inp(contacts_data)" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
-                                    <button type="submit" class="btn custom-bg text-dark shadow-none">SUBMIT</button>
+                                    <button type="submit"  class="btn custom-bg text-dark shadow-none">SUBMIT</button>
                             </div>
                             </div>
 
@@ -226,13 +226,19 @@
         let site_title_inp = document.getElementById('site_title_inp');
         let site_about_inp = document.getElementById('site_about_inp');
 
-        let Contacts_s_form  = document.getElementById('Conctacts_s_form');
+        let Contacts_s_form  = document.getElementById('Contacts_s_form');
 
         general_s_form.addEventListener('submit', function(e){
             e.preventDefault();
             upd_general(site_title_inp.value,site_about_inp.value);
         })
         
+        Contacts_s_form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // console.log(e);
+            upd_contacts();
+            
+        });
         function get_general()
         {
             let site_title = document.getElementById('site_title');
@@ -320,8 +326,8 @@
 
         function get_contacts()
         {
-            let contacts_p_id = ['address','gmap','pn1','pn2','email','tw','fb','insta'];
-            let iframe = document.createElement('iframe');
+            let contacts_p_id = ['address','gmap','pn1','pn2','email','tw','fb','insta','iframe'];
+            let iframe = document.getElementById('iframe');
 
             let xhr= new XMLHttpRequest();
             xhr.open("POST","ajax/settings_crud.php",true);
@@ -351,18 +357,13 @@
             }
         }
         
-        // Contacts_s_form.addEventListener('submit', function(e){
-        //     e.preventDefault();
-        //     upd_contacts();
-        // })
-
         function upd_contacts()
         {
             let index = ['address','gmap','pn1','pn2','email','tw','fb','insta','iframe'];
             let contacts_inp_id =['address_inp','gmap_inp','pn1_inp','pn2_inp','email_inp','tw_inp','fb_inp','insta_inp','iframe_inp'];
 
-            let data_str="";
-
+            let data_str =" ";
+            
             for(i=0; i<index.length; i++) {
                 data_str += index[i] + "=" + document.getElementById(contacts_inp_id[i]).value + '&';
             }
@@ -387,16 +388,23 @@
                 }
                 get_general();
             }
-
             xhr.send(data_str);
         }
 
+        // window.onload = function(){
+        //     get_general();
+        //     get_contacts();
+        // }
+
+
+      
 
         window.onload = function(){
             get_general();
             get_contacts();
         }
 
+    
     </script>
 </body>
 </html>

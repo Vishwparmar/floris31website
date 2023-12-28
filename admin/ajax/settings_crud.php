@@ -41,7 +41,7 @@
         echo $json_data;
     }
 
-    if(isset($_POST['upd_cotancts']))
+    if(isset($_POST['upd_contacts']))
     {
         $frm_data = filteration($_POST);
         $q = "UPDATE `contact_detail` SET `adress`=?,`gmap`=?,`pn1`=?,`pn2`=?,`email`=?,`tw`=?,`fb`=?,`insta`=?,`iframe`=? WHERE `sr_no`=?";
