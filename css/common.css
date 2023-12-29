@@ -35,3 +35,9 @@ input[type=number] {
     margin-top: 20px;
     margin-bottom: -20px;
 }
+
+.custom-alert {
+    position: fixed;
+    right: 25px;
+    top: 80px;
+  }
