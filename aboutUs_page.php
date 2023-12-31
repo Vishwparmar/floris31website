@@ -86,6 +86,36 @@
     <div class="container px-4">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper mb-5">
+<<<<<<< HEAD
+                <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+                    <img src="images/manager.jpg" class="w-50">
+                    <h5 class="mt-2">Vishwa Parmar</h5>
+                </div>
+                <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+                    <img src="images/manager.jpg" class="w-50">
+                    <h5 class="mt-2">Disha Shah</h5>
+                </div>
+                <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+                    <img src="images/manager.jpg" class="w-50">
+                    <h5 class="mt-2">Nupur Suthar</h5>
+                </div>
+                <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+                    <img src="" class="w-100">
+                    <h5 class="mt-2">Random name</h5>
+                </div>
+                <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+                    <img src="" class="w-100">
+                    <h5 class="mt-2">Random name</h5>
+                </div>
+                <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+                    <img src="" class="w-100">
+                    <h5 class="mt-2">Random name</h5>
+                </div>
+                <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+                    <img src="" class="w-100">
+                    <h5 class="mt-2">Random name</h5>
+                </div>
+=======
                 <?php 
                     $about_r = selectAll('team_details');
                     $path = ABOUT_IMG_PATH;
@@ -98,6 +128,7 @@
                         data;
                     }
                 ?>
+>>>>>>> 31313dbd7379a96f65482b4eb808cd9ea729e7cc
                 </div>
             <div class="swiper-pagination"></div>
         </div>
