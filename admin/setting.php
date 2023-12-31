@@ -37,7 +37,6 @@
                 </div>
                 
                 <!--General settings modal-->
-                
                 <div class="modal fade" id="general-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <form id="general_s_form">
@@ -213,7 +212,6 @@
                         </form>
                     </div>
                 </div>
-
 
             </div>
         </div>
