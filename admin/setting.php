@@ -37,6 +37,7 @@
                 </div>
                 
                 <!--General settings modal-->
+                
                 <div class="modal fade" id="general-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <form id="general_s_form">
@@ -142,6 +143,22 @@
                     </div>
                 </div>
 
+                <!--Managenmnet  settings section-->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title m-0">Managenment Settings</h5>
+                            <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#general-s">
+                                <i class="bi bi-pencil-square"></i>Add
+                            </button>
+                        </div>    
+                        <h6 class="card-subtitle mb-1 fw-bold">Site Title</h6>
+                        <p class="card-text" id="site_title"></p>
+                        <h6 class="card-subtitle mb-1 fw-bold">About us</h6>
+                        <p class="card-text" id="site_about"></p>
+                    </div>
+                </div>
+
                 <!-- contacts detail modal -->
                 <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
@@ -166,11 +183,11 @@
                                                 <label class="form-label fw-bold">Phone Numbers(With Counrty Code)</label>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                    <input type="number" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
+                                                    <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                    <input type="number" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
+                                                    <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
@@ -213,6 +230,7 @@
                     </div>
                 </div>
                 
+
 
             </div>
         </div>
@@ -356,6 +374,7 @@
                 document.getElementById(contacts_inp_id[i]).value = data[i+1] ;
             }
         }
+
         
         function upd_contacts()
         {
@@ -393,7 +412,7 @@
 
         // window.onload = function(){
         //     get_general();
-        //     get_contacts();
+        //     get_contacts()..ignore;
         // }
 
 
