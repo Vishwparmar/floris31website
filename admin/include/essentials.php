@@ -1,7 +1,7 @@
 <?php 
     //frontend purpose data
 
-    define('SITE_URL','http://127.0.0.1/floris31website');
+    define('SITE_URL','http://127.0.0.1/floris31website/');
     define('ABOUT_IMG_PATH',SITE_URL.'images/about/');
 
     //backend upload process needs this data
