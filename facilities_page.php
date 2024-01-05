@@ -56,73 +56,24 @@
     </div> 
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center md-2">
-                    <img src="images/pic2.jpg" width="200px" height="150px">
-                    <h5 class="m-0 ms-3">Swimming Pool</h5>
-                    </div>
-                    <p>
-                    <br>Dive into relaxation at our pristine swimming pool. Surrounded by lush greenery, it provides a serene oasis for both leisurely swims and lazy sunbathing. The poolside area is equipped with comfortable loungers, creating a perfect spot to unwind.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center md-2">
-                    <img src="images/restro.jpg" width="200px" height="150px">
-                    <h5 class="m-0 ms-3">Restro cafe</h5>
+          <?php
+            $res = selectAll('facilities');
+            $path = FACILITIES_IMG_PATH;
 
-                    </div>
-                    <p>
-                    <br>Elevate your evenings at our rooftop lounge, offering a chic and sophisticated atmosphere. Sip on handcrafted cocktails while enjoying stunning sunset vistas or starlit skies, making it a perfect setting for socializing and creating lasting memories
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+            while($row= mysqli_fetch_assoc($res)){
+              echo<<<data
+                <div class="col-lg-4 col-md-6 mb-5 px-4">
+                  <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center md-2">
-                    <img src="images/pic5.jpg" width="200px" height="150px">
-                    <h5 class="m-0 ms-3">Mini Theatre</h5>
+                      <img src="$path$row[icon]" width="200px" height="150px">
+                      <h5 class="m-0 ms-3">$row[name]</h5>
                     </div>
-                    <p>
-                    Step into a world of cinematic delight at our resort's mini-theatre. Enjoy an intimate movie experience with cutting-edge audiovisual technology, offering the perfect escape within the comfort. special screenings, or even host private movie nights with friends and family without leaving the resort.
-                    </p>
+                    <p>$row[description]</p>
+                  </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center md-2">
-                    <img src="images/play.jpg" width="200px" height="150px">
-                    <h5 class="m-0 ms-3">Play Area</h5>
-                    </div>
-                    <p>
-                    Families will delight in our specially designed play area for kids, where youthful energy meets endless fun.With safety as a priority, parents can unwind knowing that their children are enjoying a playful and secure environment.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center md-2">
-                    <img src="images/spa.jpg" width="200px" height="150px">
-                    <h5 class="m-0 ms-3">SPA</h5>
-                    </div>
-                    <p>
-                    <br>Pamper yourself at our rejuvenating spa and wellness center. Our skilled therapists offer a variety of treatments and massages, providing a perfect escape for relaxation and rejuvenation.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center md-2">
-                    <img src="images/gym.jpg" width="200px" height="150px">
-                    <h5 class="m-0 ms-3">GYM</h5>
-                    </div>
-                    <p>
-                    <br>Stay active during your stay with our well-equipped fitness center. Whether you prefer cardio workouts or strength training, our facilities cater to all fitness levels, ensuring you maintain your wellness routine.
-                    </p>
-                </div>
-            </div>
+              data;
+            }
+          ?>
         </div>
     </div>
 <!-- Additional services -->
