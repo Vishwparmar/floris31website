@@ -26,7 +26,7 @@
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <h5 class="card-title m-0">General Settings</h5>
                             <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#general-s">
-                                <i class="bi bi-pencil-square"></i>Edit
+                                <i class="bi bi-pencil-square"></i> Edit
                             </button>
                         </div>    
                         <h6 class="card-subtitle mb-1 fw-bold">Site Title</h6>
@@ -37,6 +37,7 @@
                 </div>
                 
                 <!--General settings modal-->
+                
                 <div class="modal fade" id="general-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <form id="general_s_form">
@@ -142,6 +143,50 @@
                     </div>
                 </div>
 
+                <!--Managenmnet  Team section-->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title m-0">Managenment Settings</h5>
+                            <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#team-s">
+                                <i class="bi bi-plus-square"></i> Add
+                            </button>
+                        </div> 
+                        
+                        <div class="row" id="team-data">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Management Team modal-->
+                
+                <div class="modal fade" id="team-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <form id="team_s_form">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold">Add Team Member</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                        <label class="form-label fw-bold">Name</label>
+                                        <input name="member_name" id="member_name_inp" type="text" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Picture</label>
+                                    <input name="member_picture" id="member_picture_inp" accept=".jpg, .png, .jpeg, .webp" type="file" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" onclick="member_name.value='', member_picture.value=''" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
+                                <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 <!-- contacts detail modal -->
                 <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
@@ -166,11 +211,11 @@
                                                 <label class="form-label fw-bold">Phone Numbers(With Counrty Code)</label>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                    <input type="number" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
+                                                    <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                    <input type="number" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
+                                                    <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
@@ -212,7 +257,6 @@
                         </form>
                     </div>
                 </div>
-                
 
             </div>
         </div>
@@ -228,6 +272,11 @@
 
         let Contacts_s_form  = document.getElementById('Contacts_s_form');
 
+        let team_s_form = document.getElementById('team_s_form');
+        let member_name_inp = document.getElementById('member_name_inp');
+        let member_picture_inp = document.getElementById('member_picture_inp');
+
+
         general_s_form.addEventListener('submit', function(e){
             e.preventDefault();
             upd_general(site_title_inp.value,site_about_inp.value);
@@ -239,6 +288,7 @@
             upd_contacts();
             
         });
+
         function get_general()
         {
             let site_title = document.getElementById('site_title');
@@ -267,10 +317,7 @@
                     shutdown_toggle.checked = true;
                     shutdown_toggle.value = 1;
                 }
-
-                
             }
-
             xhr.send('get_general');
         }
 
@@ -280,8 +327,8 @@
             xhr.open("POST","ajax/settings_crud.php",true);
             xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
             
-            xhr.onload = function(){
-
+            xhr.onload = function()
+            {
                 var myModal = document.getElementById('general-s');
                 var modal = bootstrap.Modal.getInstance(myModal);
                 modal.hide(); 
@@ -295,9 +342,7 @@
                 {
                     alert('error','No changes made!');
                 }
-                
             }
-
             xhr.send('site_title='+site_title_val+'&site_about='+site_about_val+'&upd_general');
         }
 
@@ -308,7 +353,6 @@
             xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
             
             xhr.onload = function(){
-                
                 if(this.responseText == 1 && general_data.shutdown==0)
                 {
                     alert('success','Site has been shutdown!');
@@ -320,7 +364,6 @@
                 }
                 get_general();   
             }
-
             xhr.send('upd_shutdown='+val);
         }
 
@@ -344,7 +387,6 @@
                iframe.src = contacts_data[9];
                contacts_inp(contacts_data);
             }
-
             xhr.send('get_contacts');
         }
 
@@ -356,6 +398,7 @@
                 document.getElementById(contacts_inp_id[i]).value = data[i+1] ;
             }
         }
+
         
         function upd_contacts()
         {
@@ -393,15 +436,83 @@
 
         // window.onload = function(){
         //     get_general();
-        //     get_contacts();
+        //     get_contacts()..ignore;
         // }
 
+        team_s_form.addEventListener('submit',function(e){
+            e.preventDefault();
+            add_member();
+        });
 
+        function add_member()
+        {
+            let data = new FormData();
+            data.append('name',member_name_inp.value);
+            data.append('picture',member_picture_inp.files[0]);
+            data.append('add_member','');
+
+            let xhr= new XMLHttpRequest();
+            xhr.open("POST","ajax/settings_crud.php",true);
+            
+            xhr.onload = function(){
+                var myModal = document.getElementById('team-s');
+                var modal = bootstrap.Modal.getInstance(myModal);
+                modal.hide(); 
+                
+                if(this.responseText == 'inv_img'){
+                    alert('error','Only JPEG and PNG images are allowed!');
+                }
+                else if(this.responseText == 'inv_size'){
+                    alert('error','Images should be less than 2MB!');
+                }
+                else if(this.responseText == 'upd_failed'){
+                    alert('error','Image upload failed! Server Down!');
+                }
+                else{
+                    alert('success','New member added!');
+                    member_name_inp.value='';
+                    member_picture_inp.value='';
+                    get_members();
+                }
+            }
+            xhr.send(data);
+        }
       
+        function get_members()
+        {
+            let xhr= new XMLHttpRequest();
+            xhr.open("POST","ajax/settings_crud.php",true);
+            xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+            
+            xhr.onload = function(){
+                document.getElementById('team-data').innerHTML = this.responseText;
+            }
+
+            xhr.send('get_members');
+        }
+
+        function rem_member(val)
+        {
+            let xhr= new XMLHttpRequest();
+            xhr.open("POST","ajax/settings_crud.php",true);
+            xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+            
+            xhr.onload = function(){
+                if(this.responseText==1){
+                    alert('success','Member Removed!');
+                    get_members();
+                }
+                else{
+                    alert('error','Server Down!');
+                }
+            }
+            xhr.send('rem_member='+val);
+        }
 
         window.onload = function(){
             get_general();
             get_contacts();
+            get_members();
         }
 
     
