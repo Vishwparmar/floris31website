@@ -77,7 +77,7 @@
     <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form>
+                <form id="register_form">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
                             <i class="bi bi-person-lines-fill"></i> User Registration
@@ -88,44 +88,44 @@
                     <span class="badge bg-secondary mb-3 text-wrap lh-base">
                             Note: Your details must match with your ID (Aadhaar card, passport, driving license etc..)
                             that will be required during check-in
-                        </span>
+                    </span>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Name</label>
-                                    <input type="text" class="form-control">
+                                    <input name="name" type="text" class="form-control shadow-none" required >
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
                                     <label class="form-label">Email</label>
-                                    <input type="email" class="form-control">
+                                    <input name="email" type="email" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Phone Number</label>
-                                    <input type="number" class="form-control">
+                                    <input name="phonenum" type="number" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
                                     <label class="form-label">Picture</label>
-                                    <input type="file" class="form-control">
+                                    <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-12 p-0 mb-3">
                                     <label class="form-label">Address</label>
-                                    <textarea class="form-control" rows="1"></textarea>
+                                    <textarea name="address" class="form-control" rows="1" required></textarea>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Pincode</label>
-                                    <input type="number" class="form-control">
+                                    <input name="pincode" type="number" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
                                     <label class="form-label">Date of birth</label>
-                                    <input type="date" class="form-control">
+                                    <input name="dob" type="date" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Password</label>
-                                    <input type="password" class="form-control">
+                                    <input name="pass" type="password" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
                                     <label class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control">
+                                    <input name="cpass" type="password" class="form-control shadow-none" required>
                                 </div>
                             </div>
                         </div>
