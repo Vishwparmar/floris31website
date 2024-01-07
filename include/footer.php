@@ -73,5 +73,18 @@
 
     });
 
+    let login_form = document.getElementById('login-form');
+
+    login_form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+
+      let data= new FormData();
+     
+      data.append('email_mob',login_form.elements['email_mob'].value);
+      data.append('pass', login_form.elements['pass'].value);
+      data.append('login','');
+
+    });
+
     setActive();
 </script>
