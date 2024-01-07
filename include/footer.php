@@ -71,6 +71,17 @@
       data.append('profile',register_form.elements['profile'].files[0]);
       data.append('register','');
 
+      var myModal = document.getElementById('registerModal');
+      var modal = bootstrap. Modal.getInstance (myModal);
+      modal.hide();
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "ajax/login_register.php", true);
+        xhr.onload = function(){
+            
+        }
+
+        xhr.send(data);
     });
 
     let login_form = document.getElementById('login-form');
