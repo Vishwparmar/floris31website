@@ -3,14 +3,16 @@
     require('admin\include\essentials.php');
 
     $contact_q = "SELECT * FROM `contact_detail` WHERE `sr_no`=?";
+    $contact_q = "SELECT * FROM `settings` WHERE `sr_no`=?";
     $values = [1];
     $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
+    $settings_r = mysqli_fetch_assoc(select($settings_q,$values,'i'));
 ?>
  
 <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">
-            <img src="images/Rooms/logo-removebg-preview.png"Logo style="width: 60px; height: auto; margin-right: 10px;"> Floris31 Resort Management
+            <img src="images/Rooms/logo-removebg-preview.png"Logo style="width: 60px; height: auto; margin-right: 10px;"><?php echo$settings_r['site_title']?>
         </a>
 
         <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
