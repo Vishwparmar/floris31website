@@ -1,8 +1,9 @@
 <div class="container-fluid footer">
     <div class="row">
         <div class="col-lg-4 p-4" style = "margin-top:25px;">
-            <h3 class="h-font fw-bold fs-3">Floris31 Resort </h3>
+            <h3 class="h-font fw-bold fs-3"> <?php echo $settings_r['site_title']?></h3>
             <p>
+                <?php echo $settings_r['site_about']?>
                 The website aims to provide an efficient and user-friendly way for the users to check and reserves rooms for a hassle-free tour as well as for the resort staff to interact with customers to improve their satisfaction.
             </p>
         </div>
@@ -71,10 +72,11 @@
         }
     }
 
-    let register_form= document.getElementById('register-form');
+    let register_form= document.getElementById('register_form');
+    console.log(register_form);
 
     register_form.addEventListener('submit', (e)=>{
-      e.preventDefault();
+    e.preventDefault();
 
       let data= new FormData();
      
