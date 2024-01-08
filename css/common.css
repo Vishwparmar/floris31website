@@ -40,4 +40,5 @@ input[type=number] {
     position: fixed;
     right: 25px;
     top: 80px;
+    z-index: 1111;
   }
