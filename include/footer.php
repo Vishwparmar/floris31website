@@ -95,6 +95,18 @@
       data.append('pass', login_form.elements['pass'].value);
       data.append('login','');
 
+      var myModal = document.getElementById('loginModal');
+      var modal = bootstrap. Modal.getInstance (myModal);
+      modal.hide();
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "ajax/login_register.php", true);
+        xhr.onload = function(){
+            
+        }
+
+        xhr.send(data);
+
     });
 
     setActive();
