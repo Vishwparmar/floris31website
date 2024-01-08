@@ -1,8 +1,9 @@
 <div class="container-fluid footer">
     <div class="row">
         <div class="col-lg-4 p-4" style = "margin-top:25px;">
-            <h3 class="h-font fw-bold fs-3">Floris31 Resort </h3>
+            <h3 class="h-font fw-bold fs-3"> <?php echo $settings_r['site_title']?></h3>
             <p>
+                <?php echo $settings_r['site_about']?>
                 The website aims to provide an efficient and user-friendly way for the users to check and reserves rooms for a hassle-free tour as well as for the resort staff to interact with customers to improve their satisfaction.
             </p>
         </div>
@@ -38,6 +39,24 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script>
+
+        function alert(type,msg){
+            let bs_class = (type == 'success') ? 'alert-success' : 'alert-danger';
+            let element = document.createElement('div');
+            element.innerHTML = `<div class="alert ${bs_class} alert-dismissible fade show custom-alert" role="alert">
+                    <strong class="me-3">${msg}</strong>                 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`;
+            document.body.append(element);
+            setTimeout(remAlert, 3000);
+    }
+
+    function remAlert(){
+        document.getElementsByClassName('alert')[0].remove();
+    }
+
+
+
     function setActive() 
     {
         let navbar = document.getElementById('#nav-bar');
@@ -53,10 +72,11 @@
         }
     }
 
-    let register_form= document.getElementById('register-form');
+    let register_form= document.getElementById('register_form');
+    console.log(register_form);
 
     register_form.addEventListener('submit', (e)=>{
-      e.preventDefault();
+    e.preventDefault();
 
       let data= new FormData();
      
@@ -78,9 +98,31 @@
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "ajax/login_register.php", true);
         xhr.onload = function(){
+            if(this.responseText == 'pass_mismatch'){
+                alert('error', "Password Mismatch!");
+            }
+            else if(this.responseText == 'email_already'){
+                alert('error',"Email is already registered!");
+            }
+            else if(this.responseText == 'phone_already'){
+                alert('error', "Phone number is already registered!");
+            }
+            else if(this.responseText == 'inv_img'){
+                alert('error', "Only JPG, WEBP & PNG images are allowed!");
+            }
+            else if(this.responseText == 'upd_failed'){
+                alert('error', "Image upload failed!");
+            }
+            else if(this.responseText == 'ins_failed'){
+                alert('error',"Registration failed!", "Server Down!");
+            }
+            else{
+                alert('Success', "Registration successfully registered!");
+                register_form.reset();
+            }
             
         }
-
+                
         xhr.send(data);
     });
 
