@@ -3,7 +3,7 @@
     require('admin\include\essentials.php');
 
     $contact_q = "SELECT * FROM `contact_detail` WHERE `sr_no`=?";
-    $contact_q = "SELECT * FROM `settings` WHERE `sr_no`=?";
+    $settings_q = "SELECT * FROM `settings` WHERE `sr_no`=?";
     $values = [1];
     $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
     $settings_r = mysqli_fetch_assoc(select($settings_q,$values,'i'));
@@ -37,6 +37,10 @@
             </li>
         </ul>
         <div class="d-flex">
+            <?php 
+                session_start();
+                print_r($_SESSION);
+            ?>
             <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
                 Login
             </button>
