@@ -89,7 +89,7 @@
                     $_SESSION['login']=true;
                     $_SESSION['uId']=$u_fetch['id'];
                     $_SESSION['uName']=$u_fetch['name'];
-                    $_SESSION['uPic']=$u_fetch['picture'];
+                    $_SESSION['uPic']=$u_fetch['profile'];
                     $_SESSION['uPhone']=$u_fetch['phonenum'];
                     echo 1;
                 }

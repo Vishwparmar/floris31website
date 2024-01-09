@@ -38,7 +38,6 @@
         </ul>
         <div class="d-flex">
             <?php 
-                session_start();
                 print_r($_SESSION);
             ?>
             <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
