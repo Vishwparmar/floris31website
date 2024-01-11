@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floris31 Resort - HOME</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <?php require('include/links.php'); ?>
+    <title><?php echo $settings_r['site_title']?>- HOME</title>
 <style>
     .availability-form{
         margin-top: -50px;
@@ -16,7 +16,7 @@
         .availability-form{
         margin-top: 25px;
         padding:0 35px;
-     }
+    }
     }
 
 </style>
@@ -28,24 +28,24 @@
     <div class="container-fluid px-lg-4 mt-4">
         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                 <div class="swiper-wrapper">
+                    <?php
+                     $res = selectAll('carousel');
+        
+                     while($row = mysqli_fetch_assoc($res))
+                     {
+                        $path = CAROUSEL_IMG_PATH;
+                        echo <<<data
+                            <div class="swiper-slide">
+                             <img src="$path$row[image]" class="w-100 d-block" height="480px"/>
+                            </div>
+                        data;
+                     }
+
+                    ?>
                 <div class="swiper-slide">
                     <img src="images/pic1.avif" class="w-100 d-block" height="480px"/>
                 </div>
-                <div class="swiper-slide">
-                    <img src="images/pic2.jpg" class="w-100 d-block" height="480px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/room.webp" class="w-100 d-block" height="480px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/pic4.jpg" class="w-100 d-block" height="480px"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/pic5.jpg" class="w-100 d-block" height="480px"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/pic10.jpg" class="w-100 d-block" height="480px"/>
-                </div>
+                
                 </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>

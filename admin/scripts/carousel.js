@@ -1,15 +1,10 @@
 
         
-
         let carousel_s_form = document.getElementById('carousel_s_form');
         
         let carousel_picture_inp = document.getElementById('carousel_picture_inp');
 
 
-        
-
-       
-    
 
         carousel_s_form.addEventListener('submit',function(e){
             e.preventDefault();
@@ -40,7 +35,7 @@
                     alert('error','Image upload failed! Server Down!');
                 }
                 else{
-                    alert('success','New member added!');
+                    alert('success','New Image added!');
                 
                     carousel_picture_inp.value='';
                     get_carousel();
@@ -70,7 +65,7 @@
             
             xhr.onload = function(){
                 if(this.responseText==1){
-                    alert('success','Member Removed!');
+                    alert('success','Image Removed!');
                     get_carousel();
                 }
                 else{

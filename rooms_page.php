@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floris31 Resort - ROOMS</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <?php require('include/links.php'); ?>
+    <title><?php echo $settings_r['site_title']?> - ROOMS</title>
 </head>
 <body class="bg-light">
     
@@ -142,7 +142,7 @@
                 <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-lg-0 mb-3">
-                            <img src="images/Rooms/room2.png" class="img-fluid rounded">
+                            <img src="images/Rooms/r2.png" class="img-fluid rounded">
                         </div>
                         <div class="col-md-5 px-lg-3 px-md-3 px-0">
                             <h5 class="mb-1">Simple Room Name</h5>
@@ -190,7 +190,7 @@
                 <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-lg-0 mb-3">
-                            <img src="images/Rooms/room2.png" class="img-fluid rounded">
+                            <img src="images/Rooms/r2.png" class="img-fluid rounded">
                         </div>
                         <div class="col-md-5 px-lg-3 px-md-3 px-0">
                             <h5 class="mb-1">Simple Room Name</h5>
