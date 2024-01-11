@@ -87,15 +87,15 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper mb-5">
                 <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-                    <img src="images/manager.jpg" class="w-50">
+                    <img src="images/about/manager.jpg" class="w-50">
                     <h5 class="mt-2">Vishwa Parmar</h5>
                 </div>
                 <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-                    <img src="images/manager.jpg" class="w-50">
+                    <img src="images/about/manager.jpg" class="w-50">
                     <h5 class="mt-2">Disha Shah</h5>
                 </div>
                 <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-                    <img src="images/manager.jpg" class="w-50">
+                    <img src="images/about/manager.jpg" class="w-50">
                     <h5 class="mt-2">Nupur Suthar</h5>
                 </div>
                 <div class="swiper-slide bg-white text-center overflow-hidden rounded">

@@ -19,14 +19,12 @@
                                         <a class="nav-link text-white" href="user_queries.php">User Queries</a>
                                     </li>
                                     <li class="nav-item">
-
-                                        <a class="nav-link text-white" href="features_facilities.php">Features & Facilities</a>
+                                         <a class="nav-link text-white" href="features_facilities.php">Features & Facilities</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="users.php">Users</a>
                                         <a class="nav-link text-white" href="carousel.php">Carousel</a>
-
-                                    </li>
+                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="setting.php">Settings</a>
                                     </li>
