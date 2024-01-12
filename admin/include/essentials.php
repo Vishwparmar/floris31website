@@ -109,7 +109,6 @@
             }
         }
     }
-
     function uploadUserImage($image)
     {
         $valid_mime = ['image/jpeg','image/png','image/webp'];
@@ -146,6 +145,5 @@
             }
         }
     }
-
 
 ?>
