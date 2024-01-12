@@ -70,7 +70,7 @@
     <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form id="register_form">
+                <form id="register-form">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
                             <i class="bi bi-person-lines-fill"></i> User Registration
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
                                     <label class="form-label">Picture</label>
-                                    <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none" required>
+                                    <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none">
                                 </div>
                                 <div class="col-md-12 p-0 mb-3">
                                     <label class="form-label">Address</label>
@@ -130,3 +130,4 @@
             </div>
         </div>
     </div>
+   

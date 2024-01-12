@@ -72,25 +72,24 @@
         }
     }
 
-    let register_form= document.getElementById('register_form');
-    console.log(register_form);
+    let register_form= document.getElementById('register-form');
 
     register_form.addEventListener('submit', (e)=>{
-    e.preventDefault();
+        e.preventDefault();
 
-      let data= new FormData();
-     
+        let data = new FormData();
+
       data.append('name',register_form.elements['name'].value);
       data.append('email',register_form.elements['email'].value);
       data.append('phonenum',register_form.elements['phonenum'].value);
       data.append('address',register_form.elements['address'].value);
       data.append('pincode', register_form.elements['pincode'].value);
-      data.append('dob', register_form.elements['dob'].value);
-      data.append('pass', register_form.elements['pass'].value);
-      data.append('cpass', register_form.elements['cpass'].value);
+      data.append('dob',register_form.elements['dob'].value);
+      data.append('pass',register_form.elements['pass'].value);
+      data.append('cpass',register_form.elements['cpass'].value);
       data.append('profile',register_form.elements['profile'].files[0]);
       data.append('register','');
-
+      
       var myModal = document.getElementById('registerModal');
       var modal = bootstrap. Modal.getInstance (myModal);
       modal.hide();
@@ -117,12 +116,11 @@
                 alert('error',"Registration failed!", "Server Down!");
             }
             else{
-                alert('Success', "Registration successfully registered!");
+                alert('success', "Registration successfully registered!");
                 register_form.reset();
             }
             
-        }
-                
+        }      
         xhr.send(data);
     });
 
