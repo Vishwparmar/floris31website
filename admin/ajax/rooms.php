@@ -134,7 +134,7 @@
         $frm_data = filteration($_POST);
         $flag = 0;
 
-        $q1 = "UPDATE `rooms` SET `name`=?,`area`=?,`price`=?,`quantity`=?,`adult`=?,`children`=?,`description`=?,`status`=? WHERE `id`=?";
+        $q1 = "UPDATE `rooms` SET `name`=?,`area`=?,`price`=?,`quantity`=?,`adult`=?,`children`=?,`description`=? WHERE `id`=?";
         $values = [$frm_data['name'],$frm_data['area'],$frm_data['price'],$frm_data['quantity'],$frm_data['adult'],$frm_data['children'],$frm_data['desc'],$frm_data['room_id']];
 
         if(update($q1,$values,'siiiiisi')){
@@ -169,10 +169,10 @@
                 mysqli_stmt_bind_param($stmt,'ii',$frm_data['room_id'],$f);
                 mysqli_stmt_execute($stmt);
             }
-            $flag = 0;
+            $flag = 1;
             mysqli_stmt_close($stmt);
         } else{
-            $flag = 1;
+            $flag = 0;
             die('query cannot be prepared - insert');
         }
 
