@@ -109,6 +109,16 @@
                                         HouseKeeping service
                                 </span>
                             </div>
+                            <div class="guests md-4">
+                            <br>
+                            <h6 class="mb-1">Guests</h6>
+                            <span class="badge bg-secondary text-dark text-wrap">
+                                2 Guests
+                            </span>
+                            <span class="badge bg-secondary text-dark text-wrap">
+                                3 Children
+                            </span>
+                            </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">₹1050 per night</h6>
@@ -157,6 +167,16 @@
                                         HouseKeeping service
                                 </span>
                             </div>
+                            <div class="guests md-4">
+                            <br>
+                            <h6 class="mb-1">Guests</h6>
+                            <span class="badge bg-secondary text-dark text-wrap">
+                                2 Guests
+                            </span>
+                            <span class="badge bg-secondary text-dark text-wrap">
+                                3 Children
+                            </span>
+                            </div>
                         </div>
                         <div class="col-md-2 text-center">
                             <h6 class="mb-4">₹1050 per night</h6>
@@ -204,6 +224,16 @@
                                 <span class="badge bg-secondary text-dark text-wrap">
                                         HouseKeeping service
                                 </span>
+                            </div>
+                            <div class="guests md-4">
+                            <br>
+                            <h6 class="mb-1">Guests</h6>
+                            <span class="badge bg-secondary text-dark text-wrap">
+                                2 Guests
+                            </span>
+                            <span class="badge bg-secondary text-dark text-wrap">
+                                3 Children
+                            </span>
                             </div>
                         </div>
                         <div class="col-md-2 text-center">
