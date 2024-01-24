@@ -93,7 +93,7 @@
             <div class="col-lg-9 col-md-12 px-4">
 
                 <?php
-                    $room_res = select("SELECT * FROM `rooms` WHERE `status`=? AND `removed`=?",[1,0],'ii');
+                    $room_res = select("SELECT * FROM `rooms` WHERE `status`=? AND `removed`=? ORDER BY `id` DESC",[1,0],'ii');
 
                     while($room_data = mysqli_fetch_assoc($room_res))
                     {
@@ -152,11 +152,20 @@
                                             <h6 class="mb-1">Facilities</h6>
                                             $facilities_data
                                         </div>
+                                        <div class="guests">
+                                            <h6 class="mb-1">Guests</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                $room_data[adult] Adults
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                $room_data[children] Children
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                                         <h6 class="mb-4">₹$room_data[price] per night</h6>
                                         <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Book Now</a>
-                                        <a href="#" class="btn btn-sm w-100 btn-outline-dark  shadow-none">More Details</a>
+                                        <a href="room_details.php?id=$room_data[id]" class="btn btn-sm w-100 btn-outline-dark  shadow-none">More Details</a>
                                     </div>
                                 </div>
                             </div>
