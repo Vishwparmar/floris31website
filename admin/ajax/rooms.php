@@ -35,7 +35,7 @@
 
         $q3 = "INSERT INTO `room_features`(`room_id`, `features_id`) VALUES (?,?)";
         
-        if($stmt = mysqli_prepare($con,$q2)){
+        if($stmt = mysqli_prepare($con,$q3)){
             foreach($features as $f){
                 mysqli_stmt_bind_param($stmt,'ii',$room_id,$f);
                 mysqli_stmt_execute($stmt);
