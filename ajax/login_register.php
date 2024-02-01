@@ -3,7 +3,7 @@
 require('../admin/include/db_config.php');
 require('../admin/include/essentials.php');
 
-
+// Registration
 if (isset($_POST['register'])) {
     $data = filteration($_POST);
 
@@ -14,19 +14,81 @@ if (isset($_POST['register'])) {
         exit;
     }
 
-    // check user exists or not.
+    $user_exist_query="SELECT * FROM `user_cred` WHERE `name` = '$_POST[name]' OR email = '$_POST[email]'";
+    $result=mysqli_query($con, $user_exist_query);
 
-    $u_exist = select(
-        "SELECT * FROM `user_cred` WHERE `email` = ? AND `phonenum` = ? LIMIT 1",
-        [$data['email'], $data['phonenum']],
-        "ss"
-    );
-
-    if (mysqli_num_rows($u_exist) != 0) {
-        $u_exist_fetch = mysqli_fetch_assoc($u_exist);
-        echo ($u_exist_fetch['email'] == $data['email']) ? 'email_already' : 'phone_already';
-        exit;
+    if ($result)
+    {
+        if(mysqli_num_rows($result)>0) #it will be executed if user & email is already taken
+        {
+            // if any user has already taken username or email address
+           $result_fetch=mysqli_fetch_assoc($result);
+           if($result_fetch['name']==$_POST['name'])
+           {
+                // error for username already taken
+                echo"
+                <script>
+                    alert('$result_fetch[name] - Username already taken');
+                    window.location.href='index.php';
+                </script>
+                ";
+           }
+           else{
+             // error for email already taken
+            echo"
+            <script>
+                alert('$result_fetch[email] - E-mail already taken');
+                window.location.href='index.php';
+            </script>
+            ";  }
+        }  
+        else
+        {
+            $password=password_hash($_POST['password'],PASSWORD_BCRYPT);
+            $query="INSERT INTO `user_cred`(`ID`, `name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `password`, `is_verified`, `token`, `t_expire`, `status`, `datentime`) VALUES ('$_POST[ID]','$_POST[name]','$_POST[email]','$_POST[address]','$_POST[phonenum]','$_POST[pincode]','$_POST[dob]','$_POST[profile]','$password','$_POST[is_verified]','$_POST[token]','$_POST[t_expire]','$_POST[status]','$_POST[datetime]')";
+            if(mysqli_query($conn,$query))
+            {
+                // if data inserted successfully
+                echo"
+                <script>
+                    alert('Registration Successfull');
+                    window.location.href='index.php';
+                </script>
+                ";
+            }
+            else
+            {
+                echo"
+                <script>
+                    alert('Cannot Run Query');
+                    window.location.href='index.php';
+                </script>
+                ";
+            }
+        }
     }
+    else
+    {
+        echo"
+        <script>
+            alert('Cannot Run Query');
+            window.location.href='index.php';
+        </script>
+        ";
+    }
+    
+
+    // check user exists or not.
+    // $u_exist = select(
+    //     "SELECT * FROM `user_cred` WHERE `name` = ? AND `email` = ? LIMIT 1",
+    //     [$data['email'], $data['phonenum']],
+    //     "ss"
+    // );
+    // if (mysqli_num_rows($u_exist) != 0) {
+    //     $u_exist_fetch = mysqli_fetch_assoc($u_exist);
+    //     echo ($u_exist_fetch['email'] == $data['email']) ? 'email_already' : 'phone_already';
+    //     exit;
+    // }
 
     // upload user image to server
 
@@ -63,6 +125,7 @@ if (isset($_POST['register'])) {
         echo 'ins_failed';
     }
 }
+// login
 
 if (isset($_POST['login'])) {
     $data = filteration($_POST);
