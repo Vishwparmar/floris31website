@@ -8,75 +8,48 @@ if (isset($_POST['register'])) {
     $data = filteration($_POST);
 
     // match password and confirm password field
-
     if ($data['pass'] != $data['cpass']) {
         echo 'pass_mismatch';
         exit;
     }
 
-    $user_exist_query="SELECT * FROM `user_cred` WHERE `name` = '$_POST[name]' OR email = '$_POST[email]'";
-    $result=mysqli_query($con, $user_exist_query);
+    $user_exist_query = "SELECT * FROM `user_cred` WHERE `name` = '$data[name]' OR email = '$data[email]'";
+    $result = mysqli_query($con, $user_exist_query);
 
-    if ($result)
-    {
-        if(mysqli_num_rows($result)>0) #it will be executed if user & email is already taken
-        {
-            // if any user has already taken username or email address
-           $result_fetch=mysqli_fetch_assoc($result);
-           if($result_fetch['name']==$_POST['name'])
-           {
-                // error for username already taken
-                echo"
-                <script>
-                    alert('$result_fetch[name] - Username already taken');
-                    window.location.href='index.php';
-                </script>
-                ";
-           }
-           else{
-             // error for email already taken
-            echo"
-            <script>
-                alert('$result_fetch[email] - E-mail already taken');
-                window.location.href='index.php';
-            </script>
-            ";  }
-        }  
-        else
-        {
-            $password=password_hash($_POST['password'],PASSWORD_BCRYPT);
-            $query="INSERT INTO `user_cred`(`ID`, `name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `password`, `is_verified`, `token`, `t_expire`, `status`, `datentime`) VALUES ('$_POST[ID]','$_POST[name]','$_POST[email]','$_POST[address]','$_POST[phonenum]','$_POST[pincode]','$_POST[dob]','$_POST[profile]','$password','$_POST[is_verified]','$_POST[token]','$_POST[t_expire]','$_POST[status]','$_POST[datetime]')";
-            if(mysqli_query($conn,$query))
-            {
-                // if data inserted successfully
-                echo"
-                <script>
-                    alert('Registration Successfull');
-                    window.location.href='index.php';
-                </script>
-                ";
+    if ($result) {
+        if (mysqli_num_rows($result) > 0) {
+            $result_fetch = mysqli_fetch_assoc($result);
+            if ($result_fetch['name'] == $data['name']) {
+                echo "<script>alert('$result_fetch[name] - Username already taken'); window.location.href='index.php';</script>";
+            } else {
+                echo "<script>alert('$result_fetch[email] - E-mail already taken'); window.location.href='index.php';</script>";
             }
-            else
-            {
-                echo"
-                <script>
-                    alert('Cannot Run Query');
-                    window.location.href='index.php';
-                </script>
-                ";
+        } else {
+            $password = password_hash($data['pass'], PASSWORD_BCRYPT);
+            $token = bin2hex(random_bytes(16));
+            $img = uploadUserImage($_FILES['profile']);
+
+            if ($img == 'inv_img') {
+                echo 'inv_img';
+                exit;
+            } else if ($img == 'upd_failed') {
+                echo 'upd_failed';
+                exit;
+            }
+
+            $query = "INSERT INTO `user_cred`(`name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `password`, `is_verified`, `token`, `t_expire`, `status`, `datentime`) 
+                      VALUES ('$data[name]', '$data[email]', '$data[address]', '$data[phonenum]', '$data[pincode]', '$data[dob]', '$img', '$password', 0, '$token', NULL, 1, CURRENT_TIMESTAMP)";
+
+            if (mysqli_query($con, $query)) {
+                echo "<script>alert('Registration Successful'); window.location.href='index.php';</script>";
+            } else {
+                echo "<script>alert('Cannot Run Query'); window.location.href='index.php';</script>";
             }
         }
+    } else {
+        echo "<script>alert('Cannot Run Query'); window.location.href='index.php';</script>";
     }
-    else
-    {
-        echo"
-        <script>
-            alert('Cannot Run Query');
-            window.location.href='index.php';
-        </script>
-        ";
-    }
-    
+}
 
     // check user exists or not.
     // $u_exist = select(
@@ -110,21 +83,21 @@ if (isset($_POST['register'])) {
     //     exit;
     // }
 
-    $enc_pass = password_hash($data['pass'], PASSWORD_BCRYPT);
+    // $enc_pass = password_hash($data['pass'], PASSWORD_BCRYPT);
 
-    $query = "INSERT INTO `user_cred`(`name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `password`,`token`) VALUES (?,?,?,?,?,?,?,?,?)";
+    // $query = "INSERT INTO `user_cred`(`name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `password`,`token`) VALUES (?,?,?,?,?,?,?,?,?)";
 
-    $values = [
-        $data['name'], $data['email'], $data['address'], $data['phonenum'], $data['pincode'], $data['dob'],
-        $img, $enc_pass,$token
-    ];
+    // $values = [
+    //     $data['name'], $data['email'], $data['address'], $data['phonenum'], $data['pincode'], $data['dob'],
+    //     $img, $enc_pass,$token
+    // ];
 
-    if (insert($query, $values, 'sssssssss')) {
-        echo 1;
-    } else {
-        echo 'ins_failed';
-    }
-}
+    // if (insert($query, $values, 'sssssssss')) {
+    //     echo 1;
+    // } else {
+    //     echo 'ins_failed';
+    // }
+// }
 // login
 
 if (isset($_POST['login'])) {
