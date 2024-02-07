@@ -45,7 +45,7 @@ if (isset($_POST['register'])) {
         else
         {
             $password=password_hash($_POST['password'],PASSWORD_BCRYPT);
-            $query="INSERT INTO `user_cred`(`ID`, `name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `password`, `is_verified`, `token`, `t_expire`, `status`, `datentime`) VALUES ('$_POST[ID]','$_POST[name]','$_POST[email]','$_POST[address]','$_POST[phonenum]','$_POST[pincode]','$_POST[dob]','$_POST[profile]','$password','$_POST[is_verified]','$_POST[token]','$_POST[t_expire]','$_POST[status]','$_POST[datetime]')";
+            $query="INSERT INTO `user_cred`(`ID`, `name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `password`, `is_verified`, `token`, `t_expire`, `status`, `datentime`) VALUES ('$data[ID]','$data[name]','$data[email]','$data[address]','$data[phonenum]','$data[pincode]','$data[dob]','$data[profile]','$password','$data[is_verified]','$data[token]','$data[t_expire]','$data[status]','$data[datetime]')";
             if(mysqli_query($conn,$query))
             {
                 // if data inserted successfully
@@ -112,18 +112,18 @@ if (isset($_POST['register'])) {
 
     $enc_pass = password_hash($data['pass'], PASSWORD_BCRYPT);
 
-    $query = "INSERT INTO `user_cred`(`name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `password`,`token`) VALUES (?,?,?,?,?,?,?,?,?)";
+    // $query = "INSERT INTO `user_cred`(`name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `password`,`token`) VALUES (?,?,?,?,?,?,?,?,?)";
 
-    $values = [
-        $data['name'], $data['email'], $data['address'], $data['phonenum'], $data['pincode'], $data['dob'],
-        $img, $enc_pass,$token
-    ];
+    // $values = [
+    //     $data['name'], $data['email'], $data['address'], $data['phonenum'], $data['pincode'], $data['dob'],
+    //     $img, $enc_pass,$token
+    // ];
 
-    if (insert($query, $values, 'sssssssss')) {
-        echo 1;
-    } else {
-        echo 'ins_failed';
-    }
+    // if (insert($query, $values, 'sssssssss')) {
+    //     echo 1;
+    // } else {
+    //     echo 'ins_failed';
+    // }
 }
 // login
 
