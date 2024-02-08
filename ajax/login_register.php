@@ -51,9 +51,9 @@ if (isset($_POST['register'])) {
     }
 }
 
-    // check user exists or not.
+    // check user exists or not
     // $u_exist = select(
-    //     "SELECT * FROM `user_cred` WHERE `name` = ? AND `email` = ? LIMIT 1",
+    //     "SELECT * FROM `user_cred` WHERE `name` = ? AND `email` = ? LIMIT 1",c
     //     [$data['email'], $data['phonenum']],
     //     "ss"
     // );
