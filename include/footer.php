@@ -57,7 +57,7 @@
 
 
 
-    function setActive() 
+    /*function setActive() 
     {
         let navbar = document.getElementById('#nav-bar');
         let a_tags= document.getElementsByTagName('a');
@@ -70,9 +70,9 @@
                 a_tags[i].classList.add('active');
             }
         }
-    }
+    }*/
 
-    let register_form= document.getElementById('register-form');
+    /*let register_form= document.getElementById('register-form');
 
     register_form.addEventListener('submit', (e)=>{
         e.preventDefault();
@@ -162,5 +162,5 @@
 
     });
 
-    setActive();
+    setActive();*/
 </script>
