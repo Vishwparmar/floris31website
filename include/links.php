@@ -16,7 +16,7 @@
     if($settings_r['shutdown']){
         echo<<<alertbar
             <div class='bg-danger text-center p-2 fw-bold'>
-            <i class="bi bi-exclamation-triangle-fill"></i>
+                <i class="bi bi-exclamation-triangle-fill"></i>
                 Bookings are temporarily closed!
             </div>
         alertbar;
