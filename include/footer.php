@@ -64,8 +64,6 @@
         }
     }
 
-
-
     /*function setActive() 
     {
         let navbar = document.getElementById('#nav-bar');
@@ -171,6 +169,5 @@
 
     });
 
-<<<<<<< HEAD
     setActive();*/
 </script>
