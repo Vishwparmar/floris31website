@@ -171,5 +171,6 @@
 
     });
 
+<<<<<<< HEAD
     setActive();*/
 </script>
