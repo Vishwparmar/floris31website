@@ -42,3 +42,14 @@ input[type=number] {
     top: 80px;
     z-index: 1111;
   }
+ 
+  div.user{
+    color:rgb(27, 6, 67);
+    background-color: rgb(166, 160, 196);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  div.user a{
+    color:rgb(17, 28, 70);
+  }

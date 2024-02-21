@@ -1,3 +1,7 @@
+<?php
+require('connection.php'); 
+session_start();
+?>
 
 <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
@@ -9,39 +13,51 @@
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="primary">
-            <li class="nav-item">
-                <a class="nav-link me-2" href="index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link me-2" href="rooms_page.php">Rooms</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link me-2" href="facilities_page.php">Facilities</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link me-2" href="Contact_page.php">Contact us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="aboutUs_page.php">About Us</a>
-            </li>
-        </ul>
-        <div class="d-flex">
-            <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
-                Login
-            </button>
-            <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">
-                Register
-            </button>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="primary">
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="rooms_page.php">Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="facilities_page.php">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="Contact_page.php">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs_page.php">About Us</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+            <?php 
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
+                {
+                   echo" <div class='user'>
+                        $_SESSION[username]- <a href='logout.php'>LOGOUT</a>
+                    </div>";
+                }
+                else
+                {
+                    echo "<button type='button' class='btn btn-outline-dark shadow-none me-lg-3 me-2' data-bs-toggle='modal' data-bs-target='#loginModal'>
+                            Login
+                        </button>
+                        <button type='button' class='btn btn-outline-dark shadow-none' data-bs-toggle='modal' data-bs-target='#registerModal'>
+                        Register
+                        </button>";
+                }
+            ?>
             </div>
         </div>
     </div>
-</div>
+    </div>
 </nav>
+
     <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form id="login-form">
+                <form id="login-form" method="POST" action="login_register.php">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
                             <i class="bi bi-person-circle fs-3 me-2"></i> User Login
@@ -50,15 +66,15 @@
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label class="form-label">Email / Mobile</label>
-                            <input type="text" name="email_mob" required class="form-control">
+                            <label class="form-label">Email or Username</label>
+                            <input type="text" name="email_username" required class="form-control">
                         </div>
                         <div class="mb-4">
                             <label class="form-label">Password</label>
-                            <input type="password" name="pass" required class="form-control">
+                            <input type="password" name="password" required class="form-control">
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-2">
-                            <button type="submit" class="btn btn-dark">LOGIN</button>
+                            <button type="submit" class="btn btn-dark" name="login">LOGIN</button>
                             <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
                         </div>
                     </div>
@@ -70,7 +86,7 @@
     <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form id="register-form">
+                <form id="register-form" method="POST" action="login_register.php">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
                             <i class="bi bi-person-lines-fill"></i> User Registration
@@ -78,56 +94,34 @@
                         <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    <span class="badge bg-secondary mb-3 text-wrap lh-base">
-                            Note: Your details must match with your ID (Aadhaar card, passport, driving license etc..)
-                            that will be required during check-in
-                    </span>
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Name</label>
-                                    <input name="name" type="text" class="form-control shadow-none" required >
+                                <div class="mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <input name="fullname" type="text" class="form-control shadow-none" required >
                                 </div>
-                                <div class="col-md-6 p-0 mb-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Username</label>
+                                    <input name="username" type="text" class="form-control shadow-none" required >
+                                </div>
+                                <div class="mb-3">
                                     <label class="form-label">Email</label>
                                     <input name="email" type="email" class="form-control shadow-none" required>
                                 </div>
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Phone Number</label>
-                                    <input name="phonenum" type="number" class="form-control shadow-none" required>
-                                </div>
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Picture</label>
-                                    <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none">
-                                </div>
-                                <div class="col-md-12 p-0 mb-3">
-                                    <label class="form-label">Address</label>
-                                    <textarea name="address" class="form-control" rows="1" required></textarea>
-                                </div>
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Pincode</label>
-                                    <input name="pincode" type="number" class="form-control shadow-none" required>
-                                </div>
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Date of birth</label>
-                                    <input name="dob" type="date" class="form-control shadow-none" required>
-                                </div>
-                                <div class="col-md-6 ps-0 mb-3">
+                                <div class="mb-4">
                                     <label class="form-label">Password</label>
-                                    <input name="pass" type="password" class="form-control shadow-none" required>
-                                </div>
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Confirm Password</label>
-                                    <input name="cpass" type="password" class="form-control shadow-none" required>
+                                    <input name="password" type="password" class="form-control shadow-none" required>
                                 </div>
                             </div>
                         </div>
-                        <div class ="text-center my-1">
-                            <button type="submit" class="btn btn-dark">REGISTER</button>
+                        <div class ="text-center">
+                            <button type="submit" class="btn btn-dark" name="register">REGISTER</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+   
    
