@@ -237,6 +237,17 @@
     </script>
 
     <?php require('include/footer.php'); ?>
+<?php 
+    $book_btn = "";
 
+    if(!$settings_r['shutdown']){
+        $login = 0;
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
+            $login=1;
+        }
+
+        $book_btn = "<button onclick='checkLoginToBook($login,$room_data[id])' class='btn btn-sm text-white custom-bg shadow-none'>Book Now!</button>";
+    }
+?>
 </body>
 </html>
