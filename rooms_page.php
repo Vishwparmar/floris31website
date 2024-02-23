@@ -28,6 +28,16 @@
             $adult_default = $frm_data['adult'];
             $children_default = $frm_data['children'];
         }
+        $book_btn = "";
+
+        if(!$settings_r['shutdown']){
+            $login = 0;
+            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
+                $login=1;
+            }
+
+            $book_btn = "<button onclick='checkLoginToBook($login,$room_data[id])' class='btn btn-sm w-100 text-white custom-bg shadow-none mb-2'>Book Now</button>";
+        }
     ?>
 
     <section class="ftco-section ftco-counter img" style="background-image: url(images/faciltiiess.jpg);            background-attachment: fixed;
@@ -237,17 +247,6 @@
     </script>
 
     <?php require('include/footer.php'); ?>
-<?php 
-    $book_btn = "";
 
-    if(!$settings_r['shutdown']){
-        $login = 0;
-        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
-            $login=1;
-        }
-
-        $book_btn = "<button onclick='checkLoginToBook($login,$room_data[id])' class='btn btn-sm text-white custom-bg shadow-none'>Book Now!</button>";
-    }
-?>
 </body>
 </html>
