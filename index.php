@@ -156,7 +156,8 @@
 
                         if(!$settings_r['shutdown']){
                             $login = 0;
-                            if(isset($_SESSION['login']) && $_SESSION['login'] == true){
+                            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
+                            {
                                 $login=1;
                             }
 

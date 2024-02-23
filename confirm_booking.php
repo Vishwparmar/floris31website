@@ -6,15 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <?php require('include/links.php'); ?>
-    <title><?php echo $settings_r['site_title']?> - ROOMS DETAILS</title>
+    <title><?php echo $settings_r['site_title']?> - CONFIRM BOOKING</title>
 </head>
 <body class="bg-light">
     
-    <?php require('include/header.php'); ?>
     <?php 
-        if(!isset($_GET['id'])){
+    
+        require('include/header.php'); 
+        require('connection.php');
+        
+    ?>
+    <?php 
+
+        /* 
+            check room id from url is present or not
+            shutdown mode is active or not
+            user is logged in or not
+
+        */
+        if(!isset($_GET['id']) || $settings_r['shutdown']==true)
+        {
             redirect('rooms_page.php');
         }
+        else if(!(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true))
+        {
+            redirect('rooms_page.php');
+        }
+
+        //filter and get room and user data
 
         $data= filteration($_GET);
 
@@ -26,9 +45,19 @@
 
         $room_data = mysqli_fetch_assoc($room_res);
 
+        $_SESSION['room'] = [
+            "id" => $room_data['id'],
+            "name" => $room_data['name'],
+            "price" => $room_data['price'],
+            "payment" => null,
+            "available" => false,
+        ];
 
+        $user_res = select("SELECT * FROM `registered_users` WHERE `user_id`=?" , [$_SESSION['user_id']],"i");
+        $user_data = mysqli_fetch_assoc($user_res);
 
     ?>
+
     <section class="ftco-section ftco-counter img" style="background-image: url(images/faciltiiess.jpg);background-attachment: fixed;
     background-position: top center;
     background-size: cover;
@@ -55,11 +84,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12 my-5 mb-4 px-4">
-                <h2 class="fw-bold"><?php echo $room_data['name']?></h2>
+                <h2 class="fw-bold">CONFIRM BOOKING</h2>
                 <div style="font-size: 14px;">
                     <a href="index.php" class="text-secondary text-decoration-none">HOME</a>
                     <span class="text-secondary"> > </span>
                     <a href="rooms_page.php" class="text-secondary text-decoration-none">ROOMS</a>
+                    <span class="text-secondary"> > </span>
+                    <a href="#" class="text-secondary text-decoration-none">CONFIRM</a>
                 </div>
             </div>
 
