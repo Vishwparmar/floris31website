@@ -12,6 +12,7 @@
     
     <?php 
         require('include/header.php'); 
+        require('connection.php');
 
         $checkin_default = "";
         $checkout_default = "";
