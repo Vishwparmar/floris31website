@@ -29,28 +29,6 @@
 
 
     ?>
-    <section class="ftco-section ftco-counter img" style="background-image: url(images/faciltiiess.jpg);background-attachment: fixed;
-    background-position: top center;
-    background-size: cover;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;">
-
-    	<div class="container">
-    		<div class="row justify-content-center">
-    			<div class="col-md-12">
-		    		<div class="row">
-		          <div class="col-md-12">
-		            <div class="text-center">
-		              <div class="text">
-		               <h1 style="font-family: 'Leoney Font', sans-serif; text-shadow: 0px 0px 9px rgb(5 5 5 / 94%);font-weight: 600;color:#ffffff;margin-top:15%;margin-bottom:15%;">Accommodation</h1>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-    	</div>
-    	
-    </section>
 
     <div class="container">
         <div class="row">
@@ -176,8 +154,13 @@
                             area;
 
                             if(!$settings_r['shutdown']){
+                                $login = 0;
+                                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
+                                {
+                                     $login=1;
+                                }
                                 echo<<<book
-                                    <a href="#" class="btn w-100 text-white custom-bg shadow-none mb-1">Book Now</a>
+                                    <button onclick='checkLoginToBook($login,$room_data[id])' class="btn w-100 text-white custom-bg shadow-none mb-1">Book Now</button>
                                 book;
                             }
                         
