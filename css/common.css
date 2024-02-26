@@ -43,13 +43,3 @@ input[type=number] {
     z-index: 1111;
   }
  
-  div.user{
-    color:rgb(210, 205, 219);
-    background-color: rgb(10, 6, 25);
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-weight: 500;
-  }
-  div.user a{
-    color:rgb(212, 215, 226);
-  }
