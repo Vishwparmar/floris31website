@@ -44,12 +44,12 @@ input[type=number] {
   }
  
   div.user{
-    color:rgb(27, 6, 67);
-    background-color: rgb(166, 160, 196);
+    color:rgb(210, 205, 219);
+    background-color: rgb(10, 6, 25);
     padding: 5px 15px;
     border-radius: 5px;
     font-weight: 500;
   }
   div.user a{
-    color:rgb(17, 28, 70);
+    color:rgb(212, 215, 226);
   }
