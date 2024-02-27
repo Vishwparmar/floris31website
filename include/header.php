@@ -34,6 +34,7 @@ session_start();
             <?php 
                 if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
                 {
+                  
                    echo<<<data
                     <div class="btn-group">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
@@ -45,6 +46,8 @@ session_start();
                         </ul>
                     </div>
                    data;
+       
+
                 }
                 else
                 {
@@ -83,6 +86,7 @@ session_start();
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <button type="submit" class="btn btn-dark" name="login">LOGIN</button>
+
                             <button type='button' class='btn shadow-none p-0' data-bs-toggle='modal' data-bs-target='#forgotModal' data-bs-dismiss="modal">
                                 Forgot Password?
                             </button>
@@ -113,6 +117,7 @@ session_start();
                                 CANCEL
                             </button>
                             <button type="submit" class="btn btn-dark" name="login">SEND LINK</button>
+                            <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
                         </div>
                     </div>
                 </form>
