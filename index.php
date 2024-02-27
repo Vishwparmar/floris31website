@@ -18,8 +18,19 @@
         padding:0 35px;
     }
     }
-
+   
+    .facility-item:hover {
+        background-color: teal !important; 
+        cursor: pointer;/* Change to desired hover background color */
+    }
+    .pop:hover{
+            border-top-color: var(--teal) !important;
+            transform: scale(1.03);
+            transition: all 0.3s;
+    }
 </style>
+
+
 </head>
 <body class="bg-light"><!--navbar-->
     <?php require('include/header.php'); ?>
@@ -228,7 +239,7 @@
 
                 while($row= mysqli_fetch_assoc($res)){
                 echo<<<data
-                    <div class="col-lg-2 col-md-1 text-center bg-white rounded shadow py-4 my-3 center-content">
+                    <div class="col-lg-2 col-md-1 text-center bg-white rounded shadow py-4 my-3 center-content facility-item pop !important">
                         <img width="48" height="48" src="$path$row[icon]" alt="wifi"/>
                         <h5 class="mt-3">$row[name]</h5>
                     </div>
