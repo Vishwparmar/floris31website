@@ -34,9 +34,20 @@ session_start();
             <?php 
                 if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
                 {
-                   echo" <div class='user'>
-                        $_SESSION[username]- <a href='logout.php'>LOGOUT</a>
-                    </div>";
+                  
+                   echo<<<data
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            $_SESSION[username]
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
+                            <li><a class="dropdown-item" href="bookings.php">Bookings</a></li>
+                            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                        </ul>
+                    </div>
+                   data;
+       
+
                 }
                 else
                 {
@@ -75,6 +86,37 @@ session_start();
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <button type="submit" class="btn btn-dark" name="login">LOGIN</button>
+
+                            <button type='button' class='btn shadow-none p-0' data-bs-toggle='modal' data-bs-target='#forgotModal' data-bs-dismiss="modal">
+                                Forgot Password?
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="forgotModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="forgot-form" method="POST" action="login_register.php">
+                    <div class="modal-header">
+                        <h5 class="modal-title d-flex align-items-center">
+                            <i class="bi bi-person-circle fs-3 me-2"></i> Forgot Password
+                        </h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-4">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" required class="form-control">
+                        </div>
+                       
+                        <div class="mb-2 text-end">
+                            <button type='button' class='btn shadow-none p-0 me-2' data-bs-toggle='modal' data-bs-target='#loginModal' data-bs-dismiss="modal" >
+                                CANCEL
+                            </button>
+                            <button type="submit" class="btn btn-dark" name="login">SEND LINK</button>
                             <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
                         </div>
                     </div>
