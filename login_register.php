@@ -62,6 +62,8 @@ if(isset($_POST['login']))
                 {
                     $_SESSION['logged_in']=true;
                     $_SESSION['username']=$result_fetch['username'];
+                    $_SESSION['user_id']=$result_fetch['user_id'];
+
                     header("location: index.php");
                 }
                 else

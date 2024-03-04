@@ -19,6 +19,7 @@
           transition: all 0.3s;
         }
 
+        
     </style>
 </head>
 <body class="bg-light"><!--navbar-->

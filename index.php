@@ -18,8 +18,19 @@
         padding:0 35px;
     }
     }
-
+   
+    .facility-item:hover {
+        background-color: teal !important; 
+        cursor: pointer;/* Change to desired hover background color */
+    }
+    .pop:hover{
+            border-top-color: var(--teal) !important;
+            transform: scale(1.03);
+            transition: all 0.3s;
+    }
 </style>
+
+
 </head>
 <body class="bg-light"><!--navbar-->
     <?php require('include/header.php'); ?>
@@ -72,7 +83,7 @@
                             <select class="form-select shadow-none" name="adult">
 
                                 <?php
-                                    $guests_q = mysqli_query($con,"SELECT MAX(adult) AS `max_adult` , MAX(children) AS `max_children` FROM `rooms` WHERE `status`='1' AND `removed`='0'");
+                                    $guests_q = mysqli_query($con,"SELECT MAX(adult) AS max_adult , MAX(children) AS max_children FROM rooms WHERE status='1' AND removed='0'");
                                     $guests_res = mysqli_fetch_assoc($guests_q);
 
                                     for($i=1 ; $i<=$guests_res['max_adult'] ; $i++){
@@ -111,14 +122,14 @@
     <div class="container">
         <div class="row">
                 <?php
-                    $room_res = select("SELECT * FROM `rooms` WHERE `status`=? AND `removed`=?  ORDER BY `id` DESC LIMIT 3",[1,0],'ii');
+                    $room_res = select("SELECT * FROM rooms WHERE status=? AND removed=?  ORDER BY id DESC LIMIT 3",[1,0],'ii');
 
                     while($room_data = mysqli_fetch_assoc($room_res))
                     {
                         // get features of room
 
-                        $fea_q = mysqli_query($con,"SELECT f.name FROM `features` f 
-                            INNER JOIN `room_features` rfea ON f.id = rfea.features_id 
+                        $fea_q = mysqli_query($con,"SELECT f.name FROM features f 
+                            INNER JOIN room_features rfea ON f.id = rfea.features_id 
                             WHERE rfea.room_id = '$room_data[id]'");
 
                         $features_data = "";
@@ -129,8 +140,8 @@
                         }
                         // get facilities of room
 
-                        $fac_q = mysqli_query($con,"SELECT f.name FROM `facilities` f 
-                            INNER JOIN `room_facilities` rfac ON f.id = rfac.facilities_id 
+                        $fac_q = mysqli_query($con,"SELECT f.name FROM facilities f 
+                            INNER JOIN room_facilities rfac ON f.id = rfac.facilities_id 
                             WHERE rfac.room_id = '$room_data[id]'");
 
                         $facilities_data = "";
@@ -143,9 +154,9 @@
                         // get thumbnail of image
 
                         $room_thumb = ROOMS_IMG_PATH."logo-removebg-preview.png";
-                        $thumb_q = mysqli_query($con,"SELECT * FROM `room_images` 
-                            WHERE `room_id`='$room_data[id]' 
-                            AND `thumb`='1'");
+                        $thumb_q = mysqli_query($con,"SELECT * FROM room_images 
+                            WHERE room_id='$room_data[id]' 
+                            AND thumb='1'");
 
                         if(mysqli_num_rows($thumb_q)>0){
                             $thumb_res = mysqli_fetch_assoc($thumb_q);
@@ -156,7 +167,7 @@
 
                         if(!$settings_r['shutdown']){
                             $login = 0;
-                            if(isset($_SESSION['login']) && $_SESSION['login'] == true){
+                            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
                                 $login=1;
                             }
 
@@ -223,12 +234,12 @@
     <div class="container">
         <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
             <?php
-                $res = mysqli_query($con,"SELECT * FROM `facilities` ORDER BY `id` DESC LIMIT 5");
+                $res = mysqli_query($con,"SELECT * FROM facilities ORDER BY id DESC LIMIT 5");
                 $path = FACILITIES_IMG_PATH;
 
                 while($row= mysqli_fetch_assoc($res)){
                 echo<<<data
-                    <div class="col-lg-2 col-md-1 text-center bg-white rounded shadow py-4 my-3 center-content">
+                    <div class="col-lg-2 col-md-1 text-center bg-white rounded shadow py-4 my-3 center-content facility-item pop !important">
                         <img width="48" height="48" src="$path$row[icon]" alt="wifi"/>
                         <h5 class="mt-3">$row[name]</h5>
                     </div>

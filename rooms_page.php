@@ -29,7 +29,8 @@
         }
     ?>
 
-    <section class="ftco-section ftco-counter img" style="background-image: url(images/faciltiiess.jpg);            background-attachment: fixed;
+    <section class="ftco-section ftco-counter img" style="background-image: url(images/faciltiiess.jpg);          
+        background-attachment: fixed;
         background-position: top center;
         background-size: cover;
         transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;">
