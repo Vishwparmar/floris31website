@@ -5,7 +5,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-
 function sendMail($email,$v_code)
 {
     require("PHPMailer/PHPMailer.php");
@@ -13,10 +12,8 @@ function sendMail($email,$v_code)
     require("PHPMailer/Exception.php");
 
     $mail = new PHPMailer(true);
-
     try 
     {
-        
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -97,14 +94,11 @@ if(isset($_POST['login']))
         window.location.href='index.php';
         </script>";
     }
-
 }
-
 
 // Registration
 if (isset($_POST['register']))
 {
-
     $user_exist_query = "SELECT * FROM `registered_users` WHERE `username` = '$_POST[username]' OR `email` = '$_POST[email]'";
     $result = mysqli_query($con, $user_exist_query);
 
@@ -144,7 +138,6 @@ if (isset($_POST['register']))
                 </script>";
             }
         }
-    
     }
     else
     {
@@ -153,12 +146,5 @@ if (isset($_POST['register']))
         window.location.href='index.php';
         </script>";
     }
-
 }   
-
-   
-
-    
-
-
 ?>
