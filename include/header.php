@@ -103,7 +103,7 @@ session_start();
                 <form id="forgot-form" method="POST" action="login_register.php">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
-                            <i class="bi bi-person-circle fs-3 me-2"></i> Forgot Password
+                            <i class="bi bi-person-circle fs-3 me-2"></i> Reset Password
                         </h5>
                     </div>
                     <div class="modal-body">
@@ -117,7 +117,6 @@ session_start();
                                 CANCEL
                             </button>
                             <button type="submit" class="btn btn-dark" name="login">SEND LINK</button>
-                            <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
                         </div>
                     </div>
                 </form>
