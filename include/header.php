@@ -1,6 +1,6 @@
 <?php
-require('connection.php'); 
-session_start();
+    require('connection.php'); 
+    session_start();
 ?>
 
 <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
@@ -128,7 +128,7 @@ session_start();
     <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form id="register-form" method="POST" action="login_register.php">
+                <form id="register-form" method="POST" action="login_register.php" name="register-form" onsubmit="return passwordLength()">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
                             <i class="bi bi-person-lines-fill"></i> User Registration
@@ -164,6 +164,18 @@ session_start();
             </div>
         </div>
     </div>
+
+    <script>
+        var pass = document.forms['register-form']['password'];
+
+        function passwordLength(){
+            if(pass.value.length < 6){ // Check if the length of the password is less than 6
+                alert("Password length must be a minimum of 6 characters"); // Alert the user about the minimum length requirement
+                return false; // Return false to indicate validation failure
+            }
+            return true; // Return true if the password length is valid
+        }
+    </script>
 
    
    
