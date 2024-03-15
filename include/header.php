@@ -100,10 +100,10 @@
     <div class="modal fade" id="forgotModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form id="forgot-form" method="POST" action="login_register.php">
+                <form id="forgot-form" method="POST" action="forgotpassword.php">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
-                            <i class="bi bi-person-circle fs-3 me-2"></i> Forgot Password
+                            <i class="bi bi-person-circle fs-3 me-2"></i> Reset Password
                         </h5>
                     </div>
                     <div class="modal-body">
@@ -116,8 +116,7 @@
                             <button type='button' class='btn shadow-none p-0 me-2' data-bs-toggle='modal' data-bs-target='#loginModal' data-bs-dismiss="modal" >
                                 CANCEL
                             </button>
-                            <button type="submit" class="btn btn-dark" name="login">SEND LINK</button>
-                            <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
+                            <button type="submit" class="btn btn-dark" name="send-reset-link">SEND LINK</button>
                         </div>
                     </div>
                 </form>
