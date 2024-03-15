@@ -144,7 +144,7 @@
                 </div>
 
                 <!--Managenmnet  Team section-->
-                <!-- <div class="card border-0 shadow-sm mb-4">
+                 <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <h5 class="card-title m-0">Managenment Settings</h5>
@@ -156,11 +156,11 @@
                         <div class="row" id="team-data">
                         </div>
                     </div>
-                </div> -->
+                </div> 
 
                 <!--Management Team modal-->
                 
-                <!-- <div class="modal fade" id="team-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                 <div class="modal fade" id="team-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <form id="team_s_form">
                             <div class="modal-content">
@@ -184,7 +184,7 @@
                             </div>
                         </form>
                     </div>
-                </div> -->
+                </div> 
 
                 <!-- contacts detail modal -->
                 <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
