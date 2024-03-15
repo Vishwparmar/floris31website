@@ -187,8 +187,7 @@
         </form>
     </div>
 </div>
-
-        
+  
 <?php require('include/scripts.php'); ?>
 <script src="scripts/features_facilities.js"></script>
 </body>
