@@ -15,19 +15,19 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="primary">
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="index.php">Home</a>
+                    <a class="nav-link active me-2" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="rooms_page.php">Rooms</a>
+                    <a class="nav-link active me-2" href="rooms_page.php">Rooms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="facilities_page.php">Facilities</a>
+                    <a class="nav-link active me-2" href="facilities_page.php">Facilities</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="Contact_page.php">Contact us</a>
+                    <a class="nav-link active me-2" href="Contact_page.php">Contact us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="aboutUs_page.php">About Us</a>
+                    <a class="nav-link active" href="aboutUs_page.php">About Us</a>
                 </li>
             </ul>
             <div class="d-flex">
