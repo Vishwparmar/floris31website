@@ -142,6 +142,10 @@ session_start();
                                     <input name="fullname" type="text" class="form-control shadow-none" required >
                                 </div>
                                 <div class="mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <input name="phonenum" type="number" class="form-control shadow-none" required >
+                                </div>
+                                <div class="mb-3">
                                     <label class="form-label">Username</label>
                                     <input name="username" type="text" class="form-control shadow-none" required >
                                 </div>

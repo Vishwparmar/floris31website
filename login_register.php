@@ -59,6 +59,7 @@ if(isset($_POST['login']))
                 {
                     $_SESSION['logged_in']=true;
                     $_SESSION['username']=$result_fetch['username'];
+                    $_SESSION['phonenum']=$result_fetch['phonenum'];
                     $_SESSION['user_id']=$result_fetch['user_id'];
 
                     header("location: index.php");
@@ -121,7 +122,7 @@ if (isset($_POST['register']))
         {
             $password=password_hash($_POST['password'],PASSWORD_BCRYPT);
             $v_code=bin2hex(random_bytes(16));
-            $query="INSERT INTO `registered_users`(`full_name`, `username`, `email`, `password`,`verification_code`, `is_verified`) VALUES ('$_POST[fullname]','$_POST[username]','$_POST[email]','$password','$v_code','0')";
+            $query="INSERT INTO `registered_users`(`full_name`, `phonenum`,`username`, `email`, `password`,`verification_code`, `is_verified`) VALUES ('$_POST[fullname]','$_POST[phonenum]','$_POST[username]','$_POST[email]','$password','$v_code','0')";
             if(mysqli_query($con,$query) && sendMail($_POST['email'],$v_code))
             {
                 echo "<script>
