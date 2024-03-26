@@ -61,6 +61,7 @@ if(isset($_POST['login']))
                     $_SESSION['username']=$result_fetch['username'];
                     $_SESSION['phonenum']=$result_fetch['phonenum'];
                     $_SESSION['user_id']=$result_fetch['user_id'];
+                    $_SESSION['email']=$result_fetch['email'];
 
                     header("location: index.php");
                 }

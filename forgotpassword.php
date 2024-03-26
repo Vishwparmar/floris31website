@@ -58,7 +58,7 @@
                 $query="UPDATE `registered_users` SET `resettoken`='$reset_token',`resettokenexpire`='$date' WHERE `email`='$_POST[email]'";
                 if(mysqli_query($con,$query)&& sendMail($_POST['email'],$reset_token))
                 {
-                    echo "
+                    echo" 
                     <script>
                         alert('Password Reset Link Sent to mail');
                         window.location.href='index.php';
