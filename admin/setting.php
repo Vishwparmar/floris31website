@@ -136,15 +136,15 @@
                                 </div> 
                             <div class="mb-4">
                                  <h6 class="card-subtitle mb-1 fw-bold">iFrame</h6>
-                                 <iframe id="iframe" class="border p-2 w-100" loading="lazy"></iframe>
+                                 <iframe id="iframe" class="border p-2 w-100" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.2991840631!2d72.41493225790053!3d23.02015808674564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1709131225756!5m2!1sen!2sin"></iframe>
                             </div>     
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!--Managenmnet  Team section-->
-                <!-- <div class="card border-0 shadow-sm mb-4">
+                <!-- Managenmnet  Team section -->
+                <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <h5 class="card-title m-0">Managenment Settings</h5>
@@ -156,11 +156,11 @@
                         <div class="row" id="team-data">
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <!--Management Team modal-->
                 
-                <!-- <div class="modal fade" id="team-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal fade" id="team-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <form id="team_s_form">
                             <div class="modal-content">
@@ -184,7 +184,7 @@
                             </div>
                         </form>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- contacts detail modal -->
                 <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
