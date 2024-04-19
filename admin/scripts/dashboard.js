@@ -17,30 +17,24 @@
 // window.onload = function(){
 //     user_analytics();
 // }
-function user_analytics(period=1) {
+function registerNewUser() {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/dashboard.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    xhr.onload= function(){
-        let responseText = this.responseText;
-        let values = responseText.split('&');
-        if (values.length >= 2) {
-            let total_new_reg = values[0].split('=')[1];
-            let total_queries = values[1].split('=')[1];
-            document.getElementById('total_new_reg').textContent = total_new_reg;
-            document.getElementById('total_queries').textContent = total_queries;
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            let totalNewReg = xhr.responseText;
+            document.getElementById('total_new_reg').textContent = totalNewReg;
         } else {
-            console.error("Unexpected response format:", responseText);
+            console.error("Error updating new registration count:", xhr.statusText);
         }
     }
 
-    xhr.send('user_analytics&period='+period);
+    xhr.send('new_registration=1');
 }
 
-window.onload = function(){
-    user_analytics();
-}
+
 
 
 // function user_analytics(period = 1) {

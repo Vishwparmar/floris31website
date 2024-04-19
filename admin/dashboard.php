@@ -72,14 +72,6 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 md-4">
-                        <a href="" class="text-decoration-none">
-                            <div class="card text-center text-success p-3">
-                                <h6>Rating & Review</h6>
-                                <h1 class="mt-2 md-0">5</h1>
-                            </div>
-                        </a>
-                    </div>
                 </div>
 
                 <div class="d-flex align-items-center justify-content-between mb-3">
@@ -101,7 +93,7 @@
 
 
                 <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5>User, Queries, Reviews Analytics</h5>
+                    <h5>User & Queries Analytics</h5>
                     <select class="form-select shadow-none bg-light w-auto" onchange="user_analytics(this.value)">
                         <option value="1">Past 30 Days</option>
                         <option value="2">Past 90 Days</option>
@@ -111,35 +103,31 @@
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-md-3 md-4">
-                            <div class="card text-center text-success p-3">
+                        <div class="col-md-4 md-4">
+                            <div id="new_registration_count" class="card text-center text-success p-3">
                                 <h6>New Registration</h6>
                                 <h1 class="mt-2 md-0" id="total_new_reg">0</h1>
                             </div>
+                        </div>
                     </div>
-                    <div class="col-md-3 md-4">
+                    <div class="col-md-4 md-4">
                             <div class="card text-center text-primary p-3">
                                 <h6>Queries</h6>
                                 <h1 class="mt-2 md-0" id="total_queries"></h1>
                             </div>
                     </div>
-                    <div class="col-md-3 md-4">
-                            <div class="card text-center text-success p-3">
-                                <h6>Reviews</h6>
-                                <h1 class="mt-2 md-0">5</h1>
-                            </div>
-                    </div>
+                    
                 </div>
 
                 <h5>User</h5>
                 <div class="row mb-3">
-                    <div class="col-md-3 md-4">
+                    <div class="col-md-4 md-4">
                             <div class="card text-center text-info p-3">
                                 <h6>Total User</h6>
                                 <h1 class="mt-2 md-0"><?php echo $current_users['total']?></h1>
                             </div>
                     </div>
-                    <div class="col-md-3 md-4">
+                    <div class="col-md-4 md-4">
                             <div class="card text-center text-danger p-3">
                                 <h6>Unverified Users</h6>
                                 <h1 class="mt-2 md-0"><?php echo $current_users['unverified']?></h1>

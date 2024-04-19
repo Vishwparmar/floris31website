@@ -1,30 +1,39 @@
 <?php
 require('../include/db_config.php');
 require('../include/essentials.php');
+
 adminLogin();
 
-if(isset($_POST['user_analytics'])) {
+if (isset($_POST['user_analytics'])) {
+    $frmData = filteration($_POST);
 
-    $frm_data = filteration($_POST);
+    $condition = "";
 
-    $condition="";
-
-    if($frm_data['period']==1){
-        $condition="WHERE datentime BETWEEN NOW()- INTERVAL 30 DAY AND NOW()";
+    switch ($frmData['period']) {
+        case 'last_week':
+            $condition = "WHERE WEEK(datentime) = WEEK(NOW()) - 1 AND YEAR(datentime) = YEAR(NOW())";
+            break;
+        case 'this_week':
+            $condition = "WHERE WEEK(datentime) = WEEK(NOW()) AND YEAR(datentime) = YEAR(NOW())";
+            break;
+        default:
+            $condition = "WHERE datentime BETWEEN NOW() - INTERVAL 30 DAY AND NOW()";
+            break;
     }
-    else if($frm_data['period']==2) {
-        $condition="WHERE datentime BETWEEN NOW() - INTERVAL 90 DAY DAY AND NOW()";
-    }
-    else if($frm_data['period']==3){
-        $condition="WHERE datentime BETWEEN NOW() - INTERVAL 1 YEAR AND NOW()";
-    }
 
-    $total_queries = mysqli_fetch_assoc(mysqli_query($con, "SELECT COUNT(sr_no) AS `count`
+    $totalQueries = mysqli_fetch_assoc(mysqli_query($con, "SELECT COUNT(sr_no) AS `count`
       FROM `user_queries` $condition"));
 
-    $total_new_reg = mysqli_fetch_assoc(mysqli_query($con, "SELECT COUNT(user_id) AS `count`
+    $totalNewReg = mysqli_fetch_assoc(mysqli_query($con, "SELECT COUNT(user_id) AS `count`
       FROM `registered_users`"));
 
-    echo "total_queries={$total_queries['count']}&total_new_reg={$total_new_reg['count']}";
+    echo "total_new_reg={$totalNewReg['count']}&total_queries={$totalQueries['count']}";
+} elseif (isset($_POST['new_registration'])) {
+    // Handle new registration
+    $totalNewReg = mysqli_fetch_assoc(mysqli_query($con, "SELECT COUNT(user_id) AS `count`
+      FROM `registered_users`"));
+    echo "total_new_reg={$totalNewReg['count']}";
 }
 ?>
+
+
