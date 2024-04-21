@@ -58,6 +58,19 @@
 
 
 
+
+     // Fetch total count of currently logged-in users
+    $logged_in_users_query = mysqli_query($con, "SELECT COUNT(*) AS total_logged_in_users FROM `registered_users` WHERE `is_logged_in` = 1");
+    $logged_in_users_row = mysqli_fetch_assoc($logged_in_users_query);
+    $total_logged_in_users = $logged_in_users_row['total_logged_in_users'];
+
+   
+    $user_id = $_SESSION['user_id']; 
+
+    // Execute the query to update the `is_logged_in` column for the logged-in user
+    mysqli_query($con, "UPDATE `registered_users` SET `is_logged_in` = 1 WHERE `user_id` = $user_id");
+
+
     ?>
 
 
@@ -79,7 +92,7 @@
                 </div>
 
                 <div class="row mb-4">
-                    <div class="col-md-4 md-4">
+                    <div class="col-md-6 md-4">
                         <a href="" class="text-decoration-none">
                             <div class="card text-center text-success p-3">
                                 <h6>New Booking</h6>
@@ -87,7 +100,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 md-4">
+                    <div class="col-md-6 md-4">
                         <a href="user_queries.php" class="text-decoration-none">
                             <div class="card text-center text-primary p-3">
                                 <h6>User Queries</h6>
@@ -106,8 +119,8 @@
                         <option value="4">All time</option>
                     </select>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-md-4 md-4">
+                <div class="row justify-content-center mb-4" >
+                    <div class="col-md-6 md-4">
                             <div class="card text-center text-success p-3">
                                 <h6>Total Booking</h6>
                                 <h1 class="mt-2 md-0"><?php echo $totalBookings; ?></h1>
@@ -125,14 +138,14 @@
                     </select>
                 </div>
 
-                <div class="row mb-3">
-                        <div class="col-md-4 md-4">
+                <div class="row mb-4">
+                        <div class="col-md-6 md-4">
                             <div id="new_registration_count" class="card text-center text-success p-3">
                                 <h6>New Registration</h6>
                                 <h1 class="mt-2 md-0" id="total_new_reg"><?php echo $total_new_reg['count']?></h1>
                             </div>
                         </div>
-                    <div class="col-md-4 md-4">
+                    <div class="col-md-6 md-4">
                             <div class="card text-center text-primary p-3">
                                 <h6>Queries</h6>
                                 <h1 class="mt-2 md-0" id="total_queries"><?php echo $total_queries['count']?></h1>
@@ -141,15 +154,27 @@
                     
                 </div>
 
+                <div class="container">
+                    <h5>Total Logged-in Users</h5>
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-6 md-4">
+                            <div class="card text-center text-info p-3">
+                                <h6>Total count</h6>
+                                <h1 class="mt-2 md-0"><?php echo $total_logged_in_users; ?></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <h5>User</h5>
-                <div class="row mb-3">
-                    <div class="col-md-4 md-4">
+                <div class="row mb-4">
+                    <div class="col-md-6 md-4">
                             <div class="card text-center text-info p-3">
                                 <h6>Total User</h6>
                                 <h1 class="mt-2 md-0"><?php echo $current_users['total']?></h1>
                             </div>
                     </div>
-                    <div class="col-md-4 md-4">
+                    <div class="col-md-6 md-4">
                             <div class="card text-center text-danger p-3">
                                 <h6>Unverified Users</h6>
                                 <h1 class="mt-2 md-0"><?php echo $current_users['unverified']?></h1>
