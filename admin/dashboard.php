@@ -35,6 +35,29 @@
             COUNT(user_id) AS `total`,
             COUNT(CASE WHEN `is_verified` =0 THEN 1 END) AS `unverified`
             FROM `registered_users`"));
+
+// $total_queries = mysqli_fetch_assoc(mysqli_query($con, "SELECT COUNT(sr_no) AS `count`
+// FROM `user_queries` "));
+//  $condition = "";
+
+//  if($frm_data['period'] ==1) {
+//    $condition="WHERE datentime BETWEEN NOW() INTERVAL 30 DAY AND NOW()";
+//    }
+//    else if($frm_data['period'] ==2){
+//    $condition="WHERE datentime BETWEEN NOW() - INTERVAL 90 DAY AND NOW()";
+//    }
+//    else if($frm_data['period'] ==3){
+//    $condition="WHERE datentime BETWEEN NOW() - INTERVAL 1 YEAR AND NOW()";
+//    }
+
+ $total_queries = mysqli_fetch_assoc(mysqli_query($con, "SELECT COUNT(sr_no) AS `count`
+   FROM `user_queries`  "));
+
+ $total_new_reg = mysqli_fetch_assoc(mysqli_query($con, "SELECT COUNT(user_id) AS `count`
+   FROM `registered_users` "));
+
+
+
     ?>
 
 
@@ -93,7 +116,7 @@
 
 
                 <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5>User & Queries Analytics</h5>
+                <h5><br>User & Queries Analytics</h5>
                     <select class="form-select shadow-none bg-light w-auto" onchange="user_analytics(this.value)">
                         <option value="1">Past 30 Days</option>
                         <option value="2">Past 90 Days</option>
@@ -106,14 +129,13 @@
                         <div class="col-md-4 md-4">
                             <div id="new_registration_count" class="card text-center text-success p-3">
                                 <h6>New Registration</h6>
-                                <h1 class="mt-2 md-0" id="total_new_reg">0</h1>
+                                <h1 class="mt-2 md-0" id="total_new_reg"><?php echo $total_new_reg['count']?></h1>
                             </div>
                         </div>
-                    </div>
                     <div class="col-md-4 md-4">
                             <div class="card text-center text-primary p-3">
                                 <h6>Queries</h6>
-                                <h1 class="mt-2 md-0" id="total_queries"></h1>
+                                <h1 class="mt-2 md-0" id="total_queries"><?php echo $total_queries['count']?></h1>
                             </div>
                     </div>
                     
