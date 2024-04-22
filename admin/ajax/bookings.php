@@ -58,7 +58,7 @@
 
      if(isset($_POST['assign_room']))
     {
-        $frm_data=fiteration($_POST);
+        $frm_data=filteration($_POST);
 
         $query="UPDATE `booking_details` SET room_no=? WHERE booking_id=?";
 
