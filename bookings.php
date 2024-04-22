@@ -60,7 +60,7 @@ if(!(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true))
                             <b>Check Out :</b> $checkout
                         </p>
                         <p> 
-                            <b>Amount : </b> ₹$data[price] <br>
+                            <b>Amount : </b> ₹$data[total_pay] <br>
                             <b>Date : </b> $date
                         </p>
                     </div>
