@@ -51,9 +51,7 @@
             ";
             $i++;
         }
-
         echo $table_data;
-
     }
 
      if(isset($_POST['assign_room']))
@@ -66,7 +64,4 @@
         $res=update($query,$values,'si');
         echo $res;
     }
-
-   
-
 ?>
