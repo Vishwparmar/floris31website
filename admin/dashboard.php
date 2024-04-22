@@ -63,18 +63,18 @@
         }
 
         // Function to get total assigned rooms count
-    function getTotalAssignedRoomsCount() {
-        global $con;
-        
-        $query = "SELECT COUNT(*) AS total_assigned_rooms FROM `booking_details` WHERE room_no IS NOT NULL";
-        $result = mysqli_query($con, $query);
-        $row = mysqli_fetch_assoc($result);
-        
-        return $row['total_assigned_rooms'];
-    }
+        function getTotalAssignedRoomsCount() {
+            global $con;
+            
+            $query = "SELECT COUNT(*) AS total_assigned_rooms FROM `booking_details` WHERE room_no IS NOT NULL";
+            $result = mysqli_query($con, $query);
+            $row = mysqli_fetch_assoc($result);
+            
+            return $row['total_assigned_rooms'];
+        }
 
-    // Count total assigned rooms
-    $total_assigned_rooms = getTotalAssignedRoomsCount();
+        // Count total assigned rooms
+        $total_assigned_rooms = getTotalAssignedRoomsCount();
 
    
     ?>
