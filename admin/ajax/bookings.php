@@ -56,6 +56,17 @@
 
     }
 
+     if(isset($_POST['assign_room']))
+    {
+        $frm_data=fiteration($_POST);
+
+        $query="UPDATE `booking_details` SET room_no=? WHERE booking_id=?";
+
+        $values=[$frm_data['room_no'],$frm_data['booking_id']];
+        $res=update($query,$values,'si');
+        echo $res;
+    }
+
    
 
 ?>

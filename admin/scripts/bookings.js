@@ -11,23 +11,21 @@ function get_bookings() {
 
 let assign_room_form=document.getElementById('assign_room_form');
 
-function assign_room(id)
-{
+function assign_room(id){
   assign_room_form.elements['booking_id'].value=id;
 }
 
-assign_room_form.addEventListener('submit',function(e)
-{
+assign_room_form.addEventListener('submit',function(e){
   e.preventDefault();
   
     let data = new FormData();
-    data.append('room_no', assign_room_form.elements['room_no'].value);
-    data.append('booking_id', assign_room_form.elements['booking_id'].value);
-    data.append('assign_room');
+    data.append('room_no',assign_room_form.elements['room_no'].value);
+    data.append('booking_id',assign_room_form.elements['booking_id'].value);
+    data.append('assign_room','');
     
   
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "ajax/bookings.php", true);
+    xhr.open("POST","ajax/bookings.php",true);
   
     xhr.onload = function () {
       var myModal = document.getElementById('assign-room');
@@ -37,7 +35,7 @@ assign_room_form.addEventListener('submit',function(e)
       if(this.responseText==1)
       {
         alert('success','Room Number Alloted! Booking Finalized');
-        assign_room.reset();
+        assign_room_form.reset();
         get_bookings();
       }
       else

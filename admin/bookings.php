@@ -61,8 +61,8 @@
                     <label class="form-label fw-bold">Room Number</label>
                     <input name="room_no" type="text" class="form-control" required>
                 </div>
+                <input type="hidden" name="booking_id">
             </div>
-            <input type="hidden" name="booking_id">
             <div class="modal-footer">
                 <button type="reset" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
                 <button type="submit" class="btn custom-bg text-white shadow-none">ASSIGN</button>
