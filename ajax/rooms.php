@@ -56,10 +56,10 @@
             //check availability filter
             if($chk_avail['checkin']!='' && $chk_avail['checkout']!='')
             {
-                $tb_query = "SELECT COUNT(*) AS `total_bookings` FROM `booking_order` WHERE booking_status=? AND room_id=? AND check_out > ? AND check_in < ?";
+                $tb_query = "SELECT COUNT(*) AS `total_bookings` FROM `booking_order` WHERE `room_id`=? AND `check_out` > ? AND `check_in` < ?";
 
-                $values = ['booked',$room_data['id'],$chk_avail['checkin'],$chk_avail['checkout']];
-                $tb_fetch = mysqli_fetch_assoc(select($tb_query,$values,'siss'));
+                $values = [$room_data['id'],$chk_avail['checkin'],$chk_avail['checkout']];
+                $tb_fetch = mysqli_fetch_assoc(select($tb_query,$values,'iss'));
 
                 if(($room_data['quantity']-$tb_fetch['total_bookings'])==0)
                 {

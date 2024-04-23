@@ -57,11 +57,12 @@ if(!(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true))
                         <p>₹$data[price]</p>
                         <p> 
                             <b>Check In : </b> $checkin <br>
-                            <b>Check Out :</b> $checkout
+                            <b>Check Out :</b> $checkout <br>
+                            <b>Room No : </b> $data[room_no]
                         </p>
                         <p> 
                             <b>Amount : </b> ₹$data[total_pay] <br>
-                            <b>Date : </b> $date
+                            <b>Date : </b> $date 
                         </p>
                     </div>
                 </div>
