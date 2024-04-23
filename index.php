@@ -28,6 +28,12 @@
             transform: scale(1.03);
             transition: all 0.3s;
     }
+    .card {
+        transition: transform 0.3s ease;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
 </style>
 
 
@@ -194,10 +200,10 @@
                                     <div class="guests md-4">
                                         <br>
                                     <h6 class="mb-1">Guests</h6>
-                                    <span class="badge bg-secondary text-dark text-wrap">
+                                    <span class="badge rounded-pill bg-light text-dark text-wrap">
                                         $room_data[adult] Adults
                                     </span>
-                                    <span class="badge bg-secondary text-dark text-wrap">
+                                    <span class="badge rounded-pill bg-light text-dark text-wrap">
                                         $room_data[children] Children
                                     </span>
                                     </div>
